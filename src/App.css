@@ -1,0 +1,47 @@
+*{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+/* Hide the default checkbox */
+.custom-checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+/* Create the custom checkbox */
+
+
+.custom-checkbox-container .custom-checkbox {
+  /* width: 16px; */
+  /* height: 16px; */
+  /* border: 1px solid #d1d1d1; */
+  border-radius: 4px;
+  /* background-color: #777676; Set initial background color to grey */
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+}
+
+/* Checked state: maintain grey background and show blue tick */
+.custom-checkbox-container input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: #777676; /* Keep background color grey */
+  border-color: #d1d1d1; /* Keep border color same */
+}
+
+.custom-checkbox-container .custom-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8px; /* Adjust width to fit tick */
+  height: 14px; /* Adjust height to fit tick */
+  border: solid #007bff; /* Blue tick color */
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -60%) rotate(45deg);
+  opacity: 0;
+}
+
+/* Show checkmark when checked */
+.custom-checkbox-container input[type="checkbox"]:checked + .custom-checkbox::after {
+  opacity: 1;
+}
