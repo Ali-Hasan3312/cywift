@@ -7,7 +7,7 @@ const NewRisk = () => {
     
     <div className="h-[640px] flex gap-6">
     <Sidebar />
-        <div>
+        <div className=' -ml-3'>
       <Navbar />
         </div>
       </div>

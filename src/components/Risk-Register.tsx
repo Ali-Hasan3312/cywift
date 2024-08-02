@@ -1,30 +1,54 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa6";
 import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
 import { IoDownloadOutline, IoSearchOutline } from "react-icons/io5";
 import { LuClock8 } from "react-icons/lu";
+type CheckboxName = 'selectAll' | 'box1' | 'box2' | 'box3' | 'box4' | 'box5' | 'box6' | 'box7' | 'box8';
 
+type CheckboxState = {
+  [key in CheckboxName]: boolean;
+};
 import Sidebar from "../pages/Sidebar";
 import Navbar from "./Navbar";
 const RiskManagement = () => {
-  const [selectAll,setSelectAll] = useState<boolean>(false);
+  const [checkboxes, setCheckboxes] = useState({
+    selectAll: false,
+    box1: false,
+    box2: false,
+    box3: false,
+    box4: false,
+    box5: false,
+    box6: false,
+    box7: false,
+    box8: false,
+  });
  
-  const selectAllHandler:React.MouseEventHandler<HTMLLabelElement>  = (e)=>{
-    e.preventDefault()
- setSelectAll((prev)=> !prev)
-}
-const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  // setSelectAll(event.target.checked);
-};
- 
+  const handleSelectAll = useCallback(() => {
+    setCheckboxes(prev => {
+      const newSelectAllState = !prev.selectAll;
+      return Object.keys(prev).reduce((acc, key) => {
+        acc[key as CheckboxName] = newSelectAllState;
+        return acc;
+      },{} as CheckboxState);
+    });
+  }, []);
+  const handleSingleCheck = useCallback((boxName: keyof typeof checkboxes) => {
+    setCheckboxes(prev => {
+      const newState = { ...prev, [boxName]: !prev[boxName] };
+      const allChecked = Object.entries(newState)
+        .filter(([key]) => key !== 'selectAll')
+        .every(([, value]) => value);
+      return { ...newState, selectAll: allChecked };
+    });
+  }, []);
   
   return (
     <div className=" h-[900px] w-full bg-gray-300 pt-8 pl-8 pb-4">
     
     <div className="h-[640px] flex gap-6">
         <Sidebar />
-        <div>
+        <div className=" -ml-3">
       <Navbar />
     <div className="flex h-[525px] mt-2 gap-2">
       <div className=" h-full w-[150px] bg-white rounded-lg">
@@ -62,23 +86,23 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
       <div className="flex items-center h-10 w-full gap-2 bg-black rounded-lg">
       <div className="">
       <label className="custom-checkbox-container text-white cursor-pointer flex items-center ml-6 font-normal text-sm"
-      onClick={selectAllHandler}>
-    <input type="checkbox" checked={selectAll? true:false} onChange={handleCheckboxChange} />
+      >
+    <input type="checkbox" onChange={handleSelectAll} name="selectAll" />
     <span className="custom-checkbox h-4 w-4 bg-gray-600 border border-gray-400"></span>
     Select All
     </label>
       </div>
       
-        <span className=" text-white cursor-pointer text-[15px] text-opacity-90 font-normal ml-10 hover:text-green-500 hover:transition-all hover:duration-300">Risk Register</span>
+        <span className=" text-white cursor-pointer text-[15px] text-opacity-90 font-normal ml-10 hover:text-green-400 hover:transition-all hover:duration-300">Risk Register</span>
       
         <div className=" border border-r-[1px] ml-2 h-4 opacity-85"></div>
-        <span className=" text-white cursor-pointer text-[15px] font-normal ml-4 hover:text-green-500 hover:transition-all hover:duration-300 text-opacity-90">Risk Library</span>
+        <span className=" text-white cursor-pointer text-[15px] font-normal ml-4 hover:text-green-400 hover:transition-all hover:duration-300 text-opacity-90">Risk Library</span>
         <div className=" h-8 w-[545px] ml-5 flex items-center gap-2">
           <div className="border border-gray-400 h-7 bg-gray-800 rounded-md w-[450px] flex items-center gap-2 text-white  ml-8">
           <IoSearchOutline className=" text-xl ml-2"/>
           <input type="text" className=" w-full outline-none px-4 border-none bg-inherit h-4 text-[12px] font-light" placeholder="Search by Risk name or code" />
           </div>
-          <div className=" text-white text-opacity-90 ml-4 cursor-pointer hover:text-green-500">
+          <div className=" text-white text-opacity-90 ml-4 cursor-pointer hover:text-green-400">
             <IoDownloadOutline />
           </div>
         </div>
@@ -87,7 +111,7 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
-    <input type="checkbox" checked={selectAll? true:false} onChange={handleCheckboxChange} />
+    <input type="checkbox" checked={checkboxes["box1"]}  onChange={()=>handleSingleCheck("box1")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
@@ -126,7 +150,7 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
-    <input type="checkbox" checked={selectAll? true:false} onChange={handleCheckboxChange} />
+    <input type="checkbox" checked={checkboxes["box2"]} onChange={()=>handleSingleCheck("box2")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
@@ -165,7 +189,7 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
-    <input type="checkbox" checked={selectAll? true:false} onChange={handleCheckboxChange} />
+    <input type="checkbox" checked={checkboxes["box3"]} onChange={()=>handleSingleCheck("box3")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
@@ -202,7 +226,7 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
-    <input type="checkbox" checked={selectAll? true:false} onChange={handleCheckboxChange} />
+    <input type="checkbox" checked={checkboxes["box4"]} onChange={()=>handleSingleCheck("box4")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
@@ -239,7 +263,7 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
-    <input type="checkbox" checked={selectAll? true:false} onChange={handleCheckboxChange} />
+    <input type="checkbox" checked={checkboxes["box5"]} onChange={()=>handleSingleCheck("box5")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
@@ -276,7 +300,7 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
-    <input type="checkbox" checked={selectAll? true:false} onChange={handleCheckboxChange} />
+    <input type="checkbox" checked={checkboxes["box6"]} onChange={()=>handleSingleCheck("box6")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
@@ -313,7 +337,7 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
-    <input type="checkbox" checked={selectAll? true:false} onChange={handleCheckboxChange} />
+    <input type="checkbox" checked={checkboxes["box7"]} onChange={()=>handleSingleCheck("box7")} />
     <span className={`custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500`}></span>
     
     </label>
@@ -350,7 +374,7 @@ const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
-    <input type="checkbox" checked={selectAll? true:false} onChange={handleCheckboxChange} />
+    <input type="checkbox" checked={checkboxes["box8"]} onChange={()=>handleSingleCheck("box8")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>

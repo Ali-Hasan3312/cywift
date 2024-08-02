@@ -3,9 +3,9 @@ const Navbar = () => {
     const location = useLocation()
   return (
     <>
-      <div className="h-12 w-[1100px] bg-white flex items-center justify-between rounded-md">
+      <div className="h-12 w-[1100px] bg-white flex items-center justify-between rounded-md -mt-6">
       <h1 className=" font-medium ml-2 text-2xl">Risk Management</h1>
-      <div className=" flex items-center mr-4 gap-2">
+      <div className=" flex items-center mr-4 gap-2 cursor-pointer">
         <img className=" h-8 w-8 rounded-full" src="https://freesvg.org/img/abstract-user-flat-4.png" alt="" />
         <span>Abuzar Gafari</span>
       </div>

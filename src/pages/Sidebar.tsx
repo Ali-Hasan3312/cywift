@@ -9,13 +9,13 @@ import { RiBookLine, RiFileList2Fill, RiThunderstormsLine } from "react-icons/ri
 import { VscWorkspaceTrusted } from "react-icons/vsc";
 const Sidebar = () => {
     return (
-      <div className=" h-[638px] w-[160px] bg-black rounded-md relative">
+      <div className=" h-[638px] w-[175px] bg-black rounded-md relative -ml-8 -mt-6">
             <img className=" h-12 w-32 mx-auto" src="https://cdn.prod.website-files.com/6565124c786d4f76eddcae02/656c4f79faeb86dd4a1a7b85_image%20476.svg" alt="" />
             <button className=" bg-green-400 h-4 w-4 rounded-full absolute top-8 shadow-md shadow-black -right-2">
                 <FaLessThan  className=" h-3 w-3 font-bold"/>
             </button>
             <div className=" h-[30px] rounded-md w-[150px] mt-4 mx-auto bg-gray-300 flex cursor-pointer gap-2 items-center justify-center">
-                <div></div>
+                
                 <p className=" text-[0.75rem] font-semibold">Alpha Inc.</p>
                 <div className="flex flex-col gap-[2px] justify-center ml-2 items-center">
                     <div className=" w-4 border border-black"></div>

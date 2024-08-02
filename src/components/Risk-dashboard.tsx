@@ -1,24 +1,47 @@
 import { FaGreaterThan, FaLessThan } from "react-icons/fa6";
 import { MdOutlineFileDownload } from "react-icons/md";
 import Sidebar from "../pages/Sidebar";
-import { DoughnutChart } from "./chart";
+import { PieChart, Pie, Cell } from 'recharts';
 import Navbar from "./Navbar";
+interface DataItem {
+  name: string;
+  value: number;
+  color: string;
+}
+
+interface LegendItemProps {
+  item: DataItem;
+}
 const RiskDashboard = () => {
+  const data = [
+    { name: 'Accepted', value: 6, color: '#8884d8' },
+    { name: 'Avoided', value: 2, color: '#82ca9d' },
+    { name: 'Mitigate', value: 9, color: '#ffc658' },
+    { name: 'Transferred', value: 4, color: '#ff8042' },
+  ];
+
+  const LegendItem: React.FC<LegendItemProps> = ({ item }) => (
+    <div className="flex items-center p-2">
+      <div className={`w-1 h-1 rounded-full mr-1`} style={{ backgroundColor: item.color }}></div>
+      <span className="text-xs">{item.name}</span>
+      <span className="text-xs ml-1">{item.value}</span>
+    </div>
+  );
   return (
     <div className=" h-[900px] w-full bg-gray-300 pt-8 pl-8 pb-4">
     
     <div className="h-[640px] flex gap-6">
     <Sidebar />
-        <div>
+        <div className=" -ml-3">
       <Navbar />
-      <div className="flex items-center gap-8">
-        <select className=" h-7 w-44 text-sm font-normal rounded-md px-2 text-gray-700 mt-4 outline-none">
+      <div className="flex items-center gap-8 -mt-2">
+        <select className=" h-7 w-44 text-sm font-normal rounded-md px-2 text-gray-700 cursor-pointer mt-4 outline-none">
             <option>Risk Categories</option>
             <option>Category-1</option>
             <option>Category-2</option>
           
         </select>
-        <select className=" h-7 w-44 text-sm font-normal rounded-md px-2 text-gray-700 mt-4 outline-none">
+        <select className=" h-7 w-44 text-sm font-normal rounded-md px-2 text-gray-700 cursor-pointer mt-4 outline-none">
             <option>Risk Owner</option>
             <option>Owner-1</option>
             <option>Owner-2</option>
@@ -27,7 +50,7 @@ const RiskDashboard = () => {
          
           
         </div>
-        <div className="h-16 w-[1100px] bg-white mt-6">
+        <div className="h-16 w-[1094px] bg-white mt-3 rounded-lg">
             <h4 className=" text-[12px] ml-2 font-semibold pt-1">Risk posture</h4>
             <div className="flex gap-1 items-center">
               <div className="flex flex-col justify-center ml-2">
@@ -49,9 +72,9 @@ const RiskDashboard = () => {
               
             </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-3">
         <div>
-        <div className=" h-[360px] w-72 bg-white mt-4 rounded-lg">
+        <div className=" h-[380px] w-72 bg-white mt-3 rounded-lg">
           <h3 className=" pt-2 pl-4 text-sm font-semibold">Risk heatmap</h3>
          <div className="flex mt-8 items-center gap-1 ml-6">
             <span className="px-3 text-[10px]">5</span>
@@ -115,7 +138,7 @@ const RiskDashboard = () => {
          </div>
         </div>
         </div>
-        <div className="h-[240px] w-[795px] bg-white mt-4 rounded-lg">
+        <div className="h-[240px] w-[795px] bg-white mt-3 rounded-lg">
           <h3 className="font-semibold text-[12px] ml-2 -mb-1">Category Breakdown</h3>
           <div className=" ml-2">
             <span className=" text-[10px] font-semibold text-blue-500">Governance - Compliance/Legal</span>
@@ -221,41 +244,56 @@ const RiskDashboard = () => {
               <FaGreaterThan className=" text-[7px] text-gray-800 -ml-[2px]"/>
             </div>
           </div>
-      <div className="flex items-center gap-4">
-      <div className=" h-[105px] rounded-md w-64 bg-white -mt-20">
+      <div className="flex items-center gap-3 mt-5">
+      <div className=" h-[125px] rounded-md w-[290px] bg-white ">
           <div className="flex justify-between items-center mr-4">
-          <h2 className=" font-semibold pt-2 pl-2">Risk assessment</h2>
+          <h2 className=" font-bold pt-2 pl-4 text-[17px]">Risk assessment</h2>
           <MdOutlineFileDownload className=" text-[18px] text-gray-600 cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300"/>
           </div>
           <div className="flex items-center gap-3 ml-4 mt-2">
             <div>
-              <span className=" text-sm">Scored risks</span>
-              <p className=" text-blue-700 text-xl font-semibold ml-2">43</p>
+              <span className=" text-sm font-bold">Scored risks</span>
+              <p className=" text-blue-700 text-2xl font-semibold ml-2">43</p>
             </div>
             <div>
-              <span className=" text-sm">Unscored risks</span>
-              <p className=" text-blue-700 text-xl font-semibold ml-2">153</p>
+              <span className=" text-sm font-bold">Unscored risks</span>
+              <p className=" text-blue-700 text-2xl font-semibold ml-2">153</p>
             </div>
           </div>
         </div>
-        <div className="h-[205px] rounded-md w-80 bg-white mt-5 ">
-    <h2 className="font-semibold pt-2 pl-2">Treatment overview</h2>
-    <div className="w-full h-[calc(100%-2rem)] chart-container pl-8"> 
-    <DoughnutChart
-        labels={["Mitigate", "Accepted", "Transferred", "Avoided"]}
-        data={[9, 6, 4, 2]}
-        backgroundColor={[
-          "rgb(31, 10, 115)",
-          "rgb(88, 61, 196)",
-          "rgb(187, 176, 232)",
-          "rgb(221, 211, 242)",
-          
-        ]}
-        legends={true}
-        offset={[2, 2, 2, 2]}
-       
-    />
-    </div>
+        <div className="h-[125px] rounded-md w-[290px] bg-white ">
+    <h2 className="font-bold pt-2 pl-4 text-[17px]">Treatment overview</h2>
+    <div className="flex flex-row items-center">
+        <div className="flex-shrink-0">
+          <PieChart width={90} height={90}>
+            <Pie
+              data={data}
+              cx={45}
+              cy={45}
+              innerRadius={25}
+              outerRadius={35}
+              paddingAngle={1}
+              dataKey="value"
+            >
+              {data.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={entry.color} />
+              ))}
+            </Pie>
+          </PieChart>
+        </div>
+        <div className="ml-4 flex-grow">
+          <div className="flex justify-between mb-0.5">
+            <LegendItem item={data[0]} />
+            <div className="w-0.5" />
+            <LegendItem item={data[1]} />
+          </div>
+          <div className="flex justify-between">
+            <LegendItem item={data[2]} />
+            <div className="w-0.5" />
+            <LegendItem item={data[3]} />
+          </div>
+        </div>
+      </div>
 </div>
       </div>
        
