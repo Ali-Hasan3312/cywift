@@ -31,62 +31,63 @@ const Sidebar = () => {
             </div>
             <div className=" text-gray-400 flex items-center gap-2 ml-2 mt-4 hover:text-green-400 cursor-pointer    ">
                 <img className=" h-5 w-5" src="https://cdn.prod.website-files.com/6565124c786d4f76eddcae02/656cbb9198a3f4facf74b08b_image%20365.svg" alt="" />
-                <h5 className=" text-sm flex">M<p className=" text-[0.7rem] mr-1">𝓨 </p> C<p className=" text-[0.7rem]">𝓨</p>wift</h5>
+                <a href="#" className=" text-sm ">My Cywift</a>
             </div>
             
             <div>
                 <h5 className="text-gray-400 text-[0.7rem] ml-2 mt-4 uppercase">compliance</h5>
-                <div className="flex items-center gap-2 ml-2 mt-1 cursor-pointer">
+                <div className="flex items-center gap-2 ml-2 mt-2 cursor-pointer">
                     <RiFileList2Fill className=" text-green-400"/>
                     <span className=" text-green-400 text-sm font-normal">Controls Library</span>
                 </div>
-                <div className="flex items-center gap-2 ml-2 mt-1 text-gray-400 hover:text-green-400">
+                <div className="flex items-center gap-2 ml-2 mt-2 text-gray-400 hover:text-green-400">
                     <LuFramer className=" "/>
                     <a href="#" className="  text-sm font-normal">Frameworks</a>
                 </div>
-                <div className="flex items-center gap-2 ml-2 mt-1 text-gray-400 hover:text-green-400">
+                <div className="flex items-center text-sm gap-2 ml-2 mt-2 text-gray-400 hover:text-green-400">
                     <RiBookLine className=" "/>
-                    <a href="#" className="  text-sm font-normal">Evidence Pool</a>
+                    <a href="#" className="   font-normal">Evidence Pool</a>
                 </div>
-                <div className="flex items-center gap-2 ml-2 mt-1 text-gray-400 hover:text-green-400">
+                <div className="flex items-center gap-2 ml-2 mt-2 text-gray-400 hover:text-green-400">
                     <CiCloud className=" font-[900] text-[16px]"/>
-                    <a href="#" className="  text-[12px] font-normal flex flex-nowrap">Automation Plugins</a>
+                    <a href="#" className="text-sm font-normal flex flex-nowrap">Automation Plugins</a>
                 </div>
                 
                 
             </div>
             <div>
             <h5 className="text-gray-400 text-[0.7rem] ml-2 mt-4 uppercase">Risk </h5>
-            <div className="flex items-center gap-2 ml-2 mt-1 text-gray-400 hover:text-green-400">
+            <div className="flex items-center gap-2 ml-2 mt-2 text-gray-400 hover:text-green-400">
                     <MdInfoOutline className=" font-[900] text-[16px]"/>
-                    <a href="#" className="  text-[12px] font-normal flex flex-nowrap">Risk Management</a>
+                    <a href="#" className="  text-sm font-normal flex flex-nowrap">Risk Management</a>
                 </div>
-            <div className="flex items-center gap-2 ml-2 mt-1 text-gray-400 hover:text-green-400">
+            <div className="flex items-center gap-2 ml-2 mt-2 text-gray-400 hover:text-green-400">
                     <MdOutlineInventory2 className=" font-[900] text-[16px]"/>
-                    <a href="#" className="  text-[12px] font-normal flex flex-nowrap">Asset Inventory</a>
+                    <a href="#" className="  text-sm font-normal flex flex-nowrap">Asset Inventory</a>
                 </div>
                 
             </div>
             <div>
             <h5 className="text-gray-400 text-[0.7rem] ml-2 mt-4 uppercase">Governance</h5>
-            <div className="flex items-center gap-2 ml-2 mt-1 text-gray-400 hover:text-green-400">
+            <div className="flex items-center gap-2 ml-2 mt-2 text-gray-400 hover:text-green-400">
                     <PiNotepadThin className=" font-[900] text-[16px]"/>
-                    <a href="#" className="  text-[12px] font-normal flex flex-nowrap">Policy</a>
+                    <a href="#" className="  text-sm font-normal flex flex-nowrap">Policy</a>
                 </div>
-            <div className="flex items-center gap-2 ml-2 mt-1 text-gray-400 hover:text-green-400">
+            <div className="flex items-center gap-2 ml-2 mt-2 text-gray-400 hover:text-green-400">
                     <VscWorkspaceTrusted className=" font-[900] text-[16px]"/>
-                    <a href="#" className="  text-[12px] font-normal flex flex-nowrap">Trust Center</a>
+                    <a href="#" className="  text-sm font-normal flex flex-nowrap">Trust Center</a>
                 </div>
             </div>
          
            
-            <div className="text-gray-400 flex items-center ml-2 mt-28 gap-2 cursor-pointer hover:text-green-500">
+                <div className=" border border-t-[1px]  mt-[62px] border-gray-500 w-[140px] mx-auto"></div>
+            <div className="text-gray-400 flex items-center ml-2 mt-2  gap-2 cursor-pointer hover:text-green-500">
                 <RiThunderstormsLine />
-            <h5 className="text-gray-400 text-[0.7rem] cursor-pointer hover:text-green-400">Integrations</h5>
+            <h5 className="text-gray-400 text-sm cursor-pointer hover:text-green-400">Integrations</h5>
             </div>
-            <div className="text-gray-400 flex items-center ml-2 mt-3 gap-2 cursor-pointer hover:text-green-400">
+            <div className="text-gray-400 flex items-center ml-2 mt-2 gap-2 cursor-pointer hover:text-green-400">
             <IoSettingsOutline />
-            <h5 className=" text-[0.7rem] cursor-pointer hover:text-green-400">Settings</h5>
+            <h5 className=" text-sm cursor-pointer hover:text-green-400">Settings</h5>
             </div>
       </div>
     )

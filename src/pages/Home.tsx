@@ -1,4 +1,4 @@
-import RiskManagement from '../components/Risk-management'
+import RiskManagement from '../components/Risk-Register'
 
 const Home = () => {
   return (

@@ -13,11 +13,15 @@ const RiskDashboard = () => {
       <Navbar />
       <div className="flex items-center gap-8">
         <select className=" h-7 w-44 text-sm font-normal rounded-md px-2 text-gray-700 mt-4 outline-none">
-            <option className="">Risk Categories</option>
+            <option>Risk Categories</option>
+            <option>Category-1</option>
+            <option>Category-2</option>
           
         </select>
         <select className=" h-7 w-44 text-sm font-normal rounded-md px-2 text-gray-700 mt-4 outline-none">
-            <option className="">Risk Owner</option>
+            <option>Risk Owner</option>
+            <option>Owner-1</option>
+            <option>Owner-2</option>
           
         </select>
          
