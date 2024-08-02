@@ -1,6 +1,6 @@
 import Sidebar from '../pages/Sidebar'
 import Navbar from './Navbar'
-import RiskMapimg2 from "../assets/images/RiskMapimg2.png"
+import RiskMapimg2 from "../assets/images/Risk Map img2.png"
 const RiskMap = () => {
   return (
     <div className=" h-[900px] w-full bg-gray-300 pt-8 pl-8 pb-4 relative">
@@ -10,7 +10,7 @@ const RiskMap = () => {
         <div>
       <Navbar />
       <div>
-        <select className=" h-7 w-58 text-sm  rounded px-2 font-bold text-black mt-4 outline-none">
+        <select className=" h-7 w-58 text-sm  rounded px-2 font-bold text-black mt-[4px] outline-none">
             <option className="">RM-01 : Malicious Insider</option>
             <option className="">RM-02 : Name</option>
             <option className="">RM-03 : Name</option>
@@ -18,12 +18,12 @@ const RiskMap = () => {
         </select>
           
         </div>
-        <div className='flex'>
-        <div className='  mt-2'>
-        <img className='h-[500px] w-full ml-[150px] rounded-lg' src={RiskMapimg2} alt="" />
+        <div className='flex -ml-[150px]'>
+        <div className='  mt-[8px]'>
+        <img className='h-[480px] w-full ml-[150px] rounded-lg' src={RiskMapimg2} alt="" />
         </div>
         
-        <div className=' h-[500px] w-52 border-2 border-black rounded absolute top-48 right-20'>
+        <div className=' h-[500px] w-52 border-2 border-black rounded absolute top-[180px] right-[243px]'>
         <div className=' text-center bg-black text-gray-300'>RM-01 : Malicious Insider</div>
         <div className=' ml-1 mt-[2px]'>
           <h1 className=' underline font-bold text-sm'>Risk Assessment</h1>
