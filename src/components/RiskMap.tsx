@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 import RiskMapimg2 from "../assets/images/Risk Map img2.png"
 const RiskMap = () => {
   return (
-    <div className=" h-[900px] w-full bg-gray-300 pt-8 pl-8 pb-4 relative">
+    <div className=" h-[900px] w-full bg-gray-300 pt-8 pl-8 pb-4 relative overflow-auto">
     
     <div className="h-[640px] flex gap-6">
     <Sidebar />

@@ -3,17 +3,20 @@ const Navbar = () => {
     const location = useLocation()
   return (
     <>
-      <div className="h-12 w-[1100px] bg-white flex items-center justify-between rounded-md -mt-6">
-      <h1 className=" font-medium ml-2 text-2xl">Risk Management</h1>
-      <div className=" flex items-center mr-4 gap-2 cursor-pointer">
-        <img className=" h-8 w-8 rounded-full" src="https://freesvg.org/img/abstract-user-flat-4.png" alt="" />
-        <span>Abuzar Gafari</span>
+      <div className="h-12 w-[1100px] bg-white flex items-center justify-between rounded-md -mt-6 overflow-auto max-sm:w-[350px]">
+      <h1 className=" font-medium ml-2 text-2xl max-sm:text-[16px]">Risk Management</h1>
+      <div className=" flex items-center mr-4 gap-2 cursor-pointer max-sm:mr-6">
+        <img className=" h-8 w-8 rounded-full max-sm:h-5 max-sm:w-5" src="https://freesvg.org/img/abstract-user-flat-4.png" alt="" />
+        <select className=" outline-none cursor-pointer w-[135px] border-none max-sm:w-[120px] max-sm:text-sm">
+        <option>Abuzar Gafari</option>
+        <option>Logout</option>
+        </select>
       </div>
     </div>
     <div className=" h-12 w-[1100px] flex items-center justify-between mt-2">
       <div className="flex items-center gap-4">
-        <div className={`dashboard h-9 w-[8rem] rounded-lg cursor-pointer ${location.pathname==='/Risk/Register'? 'bg-black text-white': 'bg-white text-black'} underline flex items-center justify-center`}>
-          <Link  className="w-full h-full flex items-center justify-center" to={"/Risk/Register"}>Risk Register</Link>
+        <div className={`dashboard h-9 w-[8rem] rounded-lg cursor-pointer ${location.pathname==='/Risk/Register' ? 'bg-black text-white': 'bg-white text-black'} max-sm:h-[30px] underline flex items-center justify-center`}>
+          <Link  className="w-full h-full flex items-center justify-center max-sm:text-sm" to={"/Risk/Register"}>Risk Register</Link>
         </div>
         <div className={`dashboard h-9 cursor-pointer w-[11rem] rounded-lg   text-opacity-90 ${location.pathname==='/Risk/Dashboard'? 'bg-black text-white': 'bg-white text-black'} underline flex items-center justify-center`}>
           <Link className="w-full h-full flex items-center justify-center" to={"/Risk/Dashboard"}>Risk Dashboard</Link>
