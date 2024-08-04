@@ -20,7 +20,6 @@ const Sidebar = () => {
   
     useEffect(() => {
       window.addEventListener("resize", resizeHandler);
-  
       return () => {
         window.removeEventListener("resize", resizeHandler);
       };
@@ -34,7 +33,7 @@ const Sidebar = () => {
         </button>
       )}
        
-      <div className=" h-[638px] w-[175px] bg-black rounded-md relative -ml-8 -mt-6 overflow-hidden z-10"
+      <div className=" h-[638px] w-[185px] bg-black rounded-md relative -ml-8 -mt-6 overflow-hidden z-10"
       style={
         phoneActive
           ? {
@@ -50,9 +49,8 @@ const Sidebar = () => {
       }>
       
             <img className=" h-12 w-32 mx-auto max-sm:h-10 max-sm:w-24 max-sm:mt-3 max-sm:pt-2" src="https://cdn.prod.website-files.com/6565124c786d4f76eddcae02/656c4f79faeb86dd4a1a7b85_image%20476.svg" alt="" />
-           
             <div className="flex items-center">
-          <select className="h-[30px] rounded-md w-[175px] mt-4 mx-auto bg-gray-300 outline-none flex cursor-pointer gap-2 items-center justify-center appearance-none relative text-center max-sm:w-[130px]">
+          <select className="h-[30px] rounded-md w-[92%] mt-4 mx-auto bg-gray-300 outline-none flex cursor-pointer gap-2 items-center justify-center appearance-none relative text-center max-sm:w-[130px]">
             <option className=" text-sm font-normal max-sm:text-[10px]">Alpha Inc.</option>
             <option className=" text-sm font-normal max-sm:text-[10px]">option-1</option>
             <option className=" text-sm font-normal max-sm:text-[10px]">option-2</option>

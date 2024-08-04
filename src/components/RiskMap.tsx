@@ -5,7 +5,7 @@ const RiskMap = () => {
   return (
     <div className=" h-[900px] w-full bg-gray-300 pt-8 pl-8 pb-4 relative overflow-auto">
     
-    <div className="h-[640px] flex gap-6">
+    <div className="h-[640px] flex gap-6 overflow--yauto">
     <Sidebar />
         <div className=' -ml-3'>
       <Navbar />
@@ -18,14 +18,14 @@ const RiskMap = () => {
         </select>
           
         </div>
-        <div className='flex -ml-[150px]'>
-        <div className='  mt-[8px]'>
-        <img className='h-[480px] w-full ml-[150px] rounded-lg' src={RiskMapimg2} alt="" />
-        </div>
+        <div className='flex -ml-[150px] gap-2 items-center'>
         
-        <div className=' h-[500px] w-52 border-2 border-black rounded absolute top-[153px] right-[263px]'>
+        <img className='h-[480px] w-full ml-[150px] rounded-lg max-lg:w-[40%] max-sm:w-[15%] max-sm:h-[360px]' src={RiskMapimg2} alt="" />
+       
+        
+        <div className=' h-[500px] w-52 border-2 border-black rounded'>
         <div className=' text-center bg-black text-gray-300'>RM-01 : Malicious Insider</div>
-        <div className=' ml-1 mt-[2px]'>
+        <div className=' ml-1 '>
           <h1 className=' underline font-bold text-sm'>Risk Assessment</h1>
           <div className=' flex mt-1'>
             <div className=' h-5 w-12 bg-custom-yellow flex items-center justify-center text-[12px]'>2</div>
