@@ -32,7 +32,7 @@ const RiskDashboard = () => {
     <Sidebar />
         <div className=" -ml-3">
       <Navbar />
-      <div className="flex items-center gap-8 max-md:flex-wrap max-sm:gap-2">
+      <div className="flex items-center gap-8 max-md:flex-wrap max-sm:gap-2 -mt-1">
         <select className=" h-7 w-44 text-sm max-md:w-32 max-sm:text-[12px] font-normal rounded-md px-2 text-gray-700 cursor-pointer mt-4 outline-none">
             <option>Risk Categories</option>
             <option>Category-1</option>
@@ -48,8 +48,8 @@ const RiskDashboard = () => {
          
           
         </div>
-        <div className="h-16 w-[83vw] bg-white mt-3 rounded-lg pr-3 max-sm:h-12">
-            <h4 className=" text-[12px] ml-2 max-sm:text-[10px] font-semibold pt-1">Risk posture</h4>
+        <div className="h-20 w-[84vw] bg-white mt-3 rounded-lg pr-3 max-sm:h-12">
+            <h4 className=" text-[17px] ml-2 max-sm:text-[10px] font-semibold pt-1">Risk posture</h4>
             <div className="flex gap-1 items-center w-full">
               <div className="flex flex-col justify-center ml-2  w-[34%]">
                 <div className=" h-7 max-sm:h-3 w-full bg-custom-green"></div>
@@ -73,7 +73,7 @@ const RiskDashboard = () => {
         <div className="flex gap-3 max-lg:flex-wrap overflow-hidden">
         <div>
         <div className=" h-[378px] w-[302px] bg-white mt-3 rounded-lg">
-          <h3 className=" pt-2 pl-4 text-sm font-semibold">Risk heatmap</h3>
+          <h3 className=" pt-2 pl-4 text-[17px] font-semibold">Risk heatmap</h3>
          <div className="flex mt-8 items-center gap-1 ml-6">
             <span className="px-3 text-[10px]">5</span>
          <div className="flex items-center gap-[2px]">
@@ -137,8 +137,8 @@ const RiskDashboard = () => {
         </div>
         </div>
         <div className=" h-auto">
-      <div className="h-[240px] w-[60vw] max-lg:w-full bg-white mt-3 rounded-lg pr-3">
-      <h3 className="font-semibold text-[12px] ml-2 -mb-1">Category Breakdown</h3>
+      <div className="h-[250px] w-[61vw] max-lg:w-full bg-white mt-3 rounded-lg pr-3">
+      <h3 className="font-semibold text-[17px] ml-2 -mb-1 pt-1">Category Breakdown</h3>
           <div className=" ml-2">
             <span className=" text-[10px] font-semibold text-blue-500">Governance - Compliance/Legal</span>
             <div className="flex gap-1">

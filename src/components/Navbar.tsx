@@ -14,17 +14,18 @@ const Navbar = () => {
     }, []);
   return (
     <>
-      <div className="h-12 w-[83vw] bg-white flex items-center justify-between rounded-md -mt-6  ">
+      <div className="h-12 w-[84vw] bg-white flex items-center justify-between rounded-md -mt-6  ">
       <h1 className=" font-medium ml-2 text-2xl max-sm:text-[12px]">Risk Management</h1>
       <div className=" flex items-center mr-4 gap-2 cursor-pointer">
         <img className=" h-[4vh] w-[15%] rounded-full " src="https://freesvg.org/img/abstract-user-flat-4.png" alt="" />
+        
         <select className=" outline-none cursor-pointer border-none  max-sm:text-[11px]">
         <option>Abuzar Gafari</option>
         <option>Logout</option>
         </select>
       </div>
     </div>
-    <div className=" w-[83vw] flex flex-row items-center mt-3 max-sm:text-[12px] justify-between max-lg:justify-start max-sm:flex-wrap gap-4">
+    <div className=" w-[84vw] flex flex-row items-center mt-3 max-sm:text-[12px] justify-between max-lg:justify-start max-sm:flex-wrap gap-4">
       <div className="flex items-center gap-4 flex-row max-lg:flex-wrap">
         <div className={`dashboard h-9 w-[8rem] max-sm:w-[7rem] rounded-lg cursor-pointer  ${location.pathname==='/Risk/Register' ? 'bg-black text-white': 'bg-white text-black'} underline flex items-center justify-center`}>
           <Link  className="w-full h-full flex items-center justify-center" to={"/Risk/Register"}>Risk Register</Link>
