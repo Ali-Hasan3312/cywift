@@ -50,7 +50,7 @@ const RiskManagement = () => {
       <Navbar />
     <div className="flex h-[525px] mt-2 gap-2">
       <div className=" h-[93vh] w-[150px] bg-white rounded-lg">
-      <div className="flex items-center h-10 w-full bg-black rounded-lg cursor-pointer">
+      <div className="flex items-center h-[42px] w-full bg-black rounded-lg cursor-pointer">
        <HiOutlineAdjustmentsVertical className=" text-white ml-2" />
        <span className=" ml-10 text-white font-[300] text-[16px] text-opacity-90">All Risks</span>
       </div>
