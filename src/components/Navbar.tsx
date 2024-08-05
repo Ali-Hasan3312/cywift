@@ -24,9 +24,9 @@ const Navbar = () => {
         </select>
       </div>
     </div>
-    <div className=" w-[83vw] flex flex-row items-center max-sm:mt-4 max-sm:text-[12px] justify-between max-lg:justify-start max-sm:flex-wrap gap-4 mt-2">
+    <div className=" w-[83vw] flex flex-row items-center mt-3 max-sm:text-[12px] justify-between max-lg:justify-start max-sm:flex-wrap gap-4">
       <div className="flex items-center gap-4 flex-row max-lg:flex-wrap">
-        <div className={`dashboard h-9 w-[8rem] max-sm:w-[7rem] rounded-lg cursor-pointer ${location.pathname==='/Risk/Register' ? 'bg-black text-white': 'bg-white text-black'} underline flex items-center justify-center`}>
+        <div className={`dashboard h-9 w-[8rem] max-sm:w-[7rem] rounded-lg cursor-pointer  ${location.pathname==='/Risk/Register' ? 'bg-black text-white': 'bg-white text-black'} underline flex items-center justify-center`}>
           <Link  className="w-full h-full flex items-center justify-center" to={"/Risk/Register"}>Risk Register</Link>
         </div>
         <div className={`dashboard h-9 cursor-pointer w-[11rem] max-sm:w-[8rem] rounded-lg text-opacity-90 ${location.pathname==='/Risk/Dashboard'? 'bg-black text-white': 'bg-white text-black'} underline flex items-center justify-center`}>
