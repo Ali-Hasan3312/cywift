@@ -44,46 +44,46 @@ const RiskManagement = () => {
   }, []);
   
   return (
-    <div className=" h-[cal(100% - 100px)] bg-gray-300 pt-8 pl-8 pb-4 flex gap-6 overflow-y-auto">
+    <div className=" h-screen bg-gray-300 pt-8 pl-8 pb-4 flex gap-10 overflow-y-auto">
     <Sidebar />
-        <div className=" -ml-3">
+        <div className=" -ml-7">
       <Navbar />
     <div className="flex h-[525px] mt-2 gap-2">
-      <div className=" h-full w-[150px] bg-white rounded-lg">
+      <div className=" h-[93vh] w-[150px] bg-white rounded-lg">
       <div className="flex items-center h-10 w-full bg-black rounded-lg cursor-pointer">
        <HiOutlineAdjustmentsVertical className=" text-white ml-2" />
-       <span className=" ml-6 text-white font-[300] text-opacity-90">All Risks</span>
+       <span className=" ml-10 text-white font-[300] text-[16px] text-opacity-90">All Risks</span>
       </div>
       <div className="flex flex-col gap-3 mt-2 ml-3">
-        <h1 className=" text-[15px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Treatment</h1>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Accepted</span>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Mitigate</span>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Avoided</span>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Transferred</span>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Needs Treatment</span>
-        <div className=" border w-32 border-gray-300"></div>
+        <h1 className=" text-[17px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Treatment</h1>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Accepted</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Mitigate</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Avoided</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Transferred</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Needs Treatment</span>
+        <div className=" border w-32 border-gray-300 mr-2"></div>
       </div>
       <div className="flex flex-col gap-2 mt-2 ml-3">
-        <h1 className=" text-[15px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Assessment</h1>
+        <h1 className=" text-[17px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Assessment</h1>
        
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Scored</span>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Not Scored</span>
-        <div className=" border w-32 border-gray-300"></div>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Scored</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Not Scored</span>
+        <div className=" border w-32 border-gray-300 mr-2"></div>
       </div>
       <div className="flex flex-col gap-2 mt-2 ml-3">
-        <h1 className=" text-[15px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Category</h1>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Assessment</span>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Audits</span>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Acess Control</span>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Asset Management</span>
-        <span className=" text-[11px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Governance</span>
-        <span className=" text-[11px] font-medium cursor-pointer opa hover:text-green-500 hover:transition-all hover:duration-300">Physical Access</span>
+        <h1 className=" text-[17px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Category</h1>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Assessment</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Audits</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Acess Control</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Asset Management</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Governance</span>
+        <span className=" text-[13px] font-medium cursor-pointer opa hover:text-green-500 hover:transition-all hover:duration-300">Physical Access</span>
       </div>
       </div>
       <div className=" h-full w-full flex flex-col gap-1">
-      <div className="flex items-center h-10 w-full gap-2 bg-black rounded-lg">
+      <div className="flex items-center h-10 py-[22px] w-full gap-2 bg-black rounded-lg">
       <div className="">
-      <label className="custom-checkbox-container text-white cursor-pointer flex items-center ml-6 font-normal text-sm"
+      <label className="custom-checkbox-container text-white cursor-pointer flex items-center ml-10 font-normal text-sm"
       >
     <input type="checkbox" onChange={handleSelectAll} name="selectAll" />
     <span className="custom-checkbox h-4 w-4 bg-gray-600 border border-gray-400"></span>
@@ -91,10 +91,10 @@ const RiskManagement = () => {
     </label>
       </div>
       
-        <span className=" text-white cursor-pointer text-[15px] text-opacity-90 font-normal ml-10 hover:text-green-400 hover:transition-all hover:duration-300">Risk Register</span>
+        <span className=" text-white cursor-pointer text-[17px] text-opacity-90 font-normal ml-10 hover:text-green-400 hover:transition-all hover:duration-300">Risk Register</span>
       
         <div className=" border border-r-[1px] ml-2 h-4 opacity-85"></div>
-        <span className=" text-white cursor-pointer text-[15px] font-normal ml-4 hover:text-green-400 hover:transition-all hover:duration-300 text-opacity-90">Risk Library</span>
+        <span className=" text-white cursor-pointer text-[17px] font-normal ml-4 hover:text-green-400 hover:transition-all hover:duration-300 text-opacity-90">Risk Library</span>
         <div className=" h-8 w-[545px] ml-5 flex items-center gap-2">
           <div className="border border-gray-400 h-7 bg-gray-800 rounded-md w-[450px] flex items-center gap-2 text-white  ml-8">
           <IoSearchOutline className=" text-xl ml-2"/>
@@ -105,26 +105,26 @@ const RiskManagement = () => {
           </div>
         </div>
       </div>
-      <div className=" h-[54px] w-full bg-white rounded-lg">
-    <div className="flex items-center justify-between">
+      <div className="register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
+    <div className="flex h-full items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box1"]}  onChange={()=>handleSingleCheck("box1")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
       <LuClock8 className="mt-2"/>
-      <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold">Unauthorized System Access</span>
-      <div className="flex gap-[6px]">
-        <div className=" h-4 w-14 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-3">CyD-1</span>
+      <div className="flex flex-col gap-[4px] mt-3 ml-1">
+      <span className=" font-semibold pb-1">Unauthorized System Access</span>
+      <div className="flex gap-[10px]">
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-1</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-2</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-2</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-3">CyD-3</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-3</span>
         </div>
        
       </div>
@@ -144,26 +144,26 @@ const RiskManagement = () => {
     </div>
 
       </div>
-      <div className=" h-[54px] w-full bg-white rounded-lg">
+      <div className="register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box2"]} onChange={()=>handleSingleCheck("box2")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
       <LuClock8 className="mt-2"/>
-      <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold">Weak Authentication</span>
+      <div className="flex flex-col gap-[4px] mt-3 ml-1">
+      <span className=" font-semibold pb-1">Weak Authentication</span>
       <div className="flex gap-[6px]">
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-4</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-3">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-6</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
         </div>
        
       </div>
@@ -183,26 +183,26 @@ const RiskManagement = () => {
     </div>
 
       </div>
-      <div className=" h-[54px] w-full bg-white rounded-lg">
+      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box3"]} onChange={()=>handleSingleCheck("box3")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
       <LuClock8 className="mt-2"/>
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold">Critical System Dependencies - DoS</span>
+      <span className=" font-semibold pb-1">Critical System Dependencies - DoS</span>
       <div className="flex gap-[6px]">
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-4</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-teal-200 relative">
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
           <span className=" text-[10px] absolute left-3">CyD-5</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-6</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
         </div>
        
       </div>
@@ -220,26 +220,26 @@ const RiskManagement = () => {
     </div>
 
       </div>
-      <div className=" h-[54px] w-full bg-white rounded-lg">
+      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box4"]} onChange={()=>handleSingleCheck("box4")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
       <LuClock8 className="mt-2"/>
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold">Exposure - Zero-day Attack</span>
+      <span className=" font-semibold pb-1">Exposure - Zero-day Attack</span>
       <div className="flex gap-[6px]">
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-4</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-3">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-6</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
         </div>
        
       </div>
@@ -257,26 +257,26 @@ const RiskManagement = () => {
     </div>
 
       </div>
-      <div className=" h-[54px] w-full bg-white rounded-lg">
+      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box5"]} onChange={()=>handleSingleCheck("box5")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
       <LuClock8 className="mt-2"/>
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold">Physical Security - Theft</span>
+      <span className=" font-semibold pb-1">Physical Security - Theft</span>
       <div className="flex gap-[6px]">
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-4</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-3">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-6</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
         </div>
        
       </div>
@@ -294,26 +294,26 @@ const RiskManagement = () => {
     </div>
 
       </div>
-      <div className=" h-[54px] w-full bg-white rounded-lg">
+      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box6"]} onChange={()=>handleSingleCheck("box6")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
       <LuClock8 className="mt-2"/>
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold">Business Continuity - Lack of Contingency</span>
+      <span className=" font-semibold pb-1">Business Continuity - Lack of Contingency</span>
       <div className="flex gap-[6px]">
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-4</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-3">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-6</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
         </div>
        
       </div>
@@ -331,26 +331,26 @@ const RiskManagement = () => {
     </div>
 
       </div>
-      <div className=" h-[54px] w-full bg-white rounded-lg">
+      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box7"]} onChange={()=>handleSingleCheck("box7")} />
     <span className={`custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500`}></span>
     
     </label>
       <LuClock8 className="mt-2"/>
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold">Risky Software Supply Chain</span>
+      <span className=" font-semibold pb-1">Risky Software Supply Chain</span>
       <div className="flex gap-[6px]">
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-4</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-3">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-6</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
         </div>
        
       </div>
@@ -368,26 +368,26 @@ const RiskManagement = () => {
     </div>
 
       </div>
-      <div className=" h-[54px] w-full bg-white rounded-lg">
+      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-6 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box8"]} onChange={()=>handleSingleCheck("box8")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
       <LuClock8 className="mt-2"/>
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold">Network Management - Advance Persistence Threats</span>
+      <span className=" font-semibold pb-1">Network Management - Advance Persistence Threats</span>
       <div className="flex gap-[6px]">
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-4</span>
+        <div className="h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-3">CyD-5</span>
+        <div className="h-5 w-16 rounded-lg bg-teal-200 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
         </div>
-        <div className=" h-4 w-14 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-3">CyD-6</span>
+        <div className="h-5 w-16 rounded-lg bg-red-400 relative">
+          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
         </div>
        
       </div>
@@ -405,20 +405,20 @@ const RiskManagement = () => {
     </div>
 
       </div>
-      <div className="flex justify-between">
-        <div className=" h-6 w-16 rounded-lg text-gray-400 bg-white text-[12px] text-center flex items-center justify-between">
-          <span className=" ml-2">8/page</span>
+      <div className="flex justify-between mt-1">
+        <div className=" h-10 w-20 rounded-lg text-gray-400 bg-white text-[12px] text-center flex items-center justify-center cursor-pointer">
+          <span>8/page</span>
         </div>
         <div className="flex gap-2">
-          <div className=" h-6 w-6 rounded-md bg-white text-[8px] flex items-center justify-center cursor-pointer"><FaLessThan className=" ml-1" /><FaLessThan className=" mr-[6px]" /></div>
-          <div className=" h-6 w-6 rounded-md bg-white text-[8px] flex items-center justify-center cursor-pointer"><FaLessThan /></div>
-          <div className=" h-6 w-6 rounded-md text-white cursor-pointer text-[10px] flex items-center justify-center bg-gray-900">1</div>
-          <div className=" h-6 w-6 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer">2</div>       
-             <div className=" h-6 w-6 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer">3</div>      
-                 <div className=" h-6 w-6 rounded-md bg-white text-[12px] flex items-center justify-center cursor-pointer">...</div> 
-                          <div className=" h-6 w-6 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer">10</div> 
-                                   <div className=" h-6 w-6 rounded-md bg-white text-[8px] flex items-center justify-center cursor-pointer"><FaGreaterThan /></div>
-          <div className=" h-6 w-6 rounded-md bg-white text-[8px] flex items-center justify-center cursor-pointer"><FaGreaterThan className=" ml-1" /><FaGreaterThan className=" mr-[6px]" /></div>
+          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer"><FaLessThan className=" ml-1" /><FaLessThan className=" mr-[6px]" /></div>
+          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer"><FaLessThan /></div>
+          <div className=" h-10 w-10 rounded-md text-white cursor-pointer text-[10px] flex items-center justify-center bg-gray-900">1</div>
+          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer">2</div>       
+             <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer">3</div>      
+                 <div className=" h-10 w-10 rounded-md bg-white text-[22px] flex items-center justify-center cursor-pointer">...</div> 
+                          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer">10</div> 
+                                   <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer"><FaGreaterThan /></div>
+          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer"><FaGreaterThan className=" ml-1" /><FaGreaterThan className=" mr-[6px]" /></div>
         </div>
       </div>
       </div>
