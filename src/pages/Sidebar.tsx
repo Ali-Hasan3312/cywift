@@ -33,7 +33,7 @@ const Sidebar = () => {
         </button>
       )}
        
-      <div className=" h-[638px] w-[185px] bg-black rounded-md relative -ml-8 -mt-6 overflow-hidden z-10"
+      <div className=" h-full pb-2 w-[13vw] bg-black rounded-md relative -ml-8 -mt-6 overflow-hidden z-10"
       style={
         phoneActive
           ? {

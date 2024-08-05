@@ -44,10 +44,8 @@ const RiskManagement = () => {
   }, []);
   
   return (
-    <div className=" h-[calc(100% - 100px)] w-[100vw] bg-gray-300 pt-8 pl-8 pb-4 overflow-x-auto">
-    
-    <div className="h-[640px] flex gap-6">
-        <Sidebar />
+    <div className=" h-[cal(100% - 100px)] bg-gray-300 pt-8 pl-8 pb-4 flex gap-6 overflow-y-auto">
+    <Sidebar />
         <div className=" -ml-3">
       <Navbar />
     <div className="flex h-[525px] mt-2 gap-2">
@@ -426,7 +424,7 @@ const RiskManagement = () => {
       </div>
     </div>
     </div>
-    </div>
+   
     </div>
   )
 }

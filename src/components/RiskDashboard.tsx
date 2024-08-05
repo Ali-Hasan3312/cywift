@@ -29,8 +29,6 @@ const RiskDashboard = () => {
   );
   return (
     <div className=" h-[cal(100% - 100px)] bg-gray-300 pt-8 pl-8 pb-4 flex gap-6 overflow-y-auto">
-    
-    
     <Sidebar />
         <div className=" -ml-3">
       <Navbar />

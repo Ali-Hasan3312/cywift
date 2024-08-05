@@ -3,11 +3,9 @@ import Navbar from './Navbar'
 import RiskMapimg2 from "../assets/images/Risk Map img2.png"
 const RiskMap = () => {
   return (
-    <div className=" h-[cal(100% - 100px)] w-full bg-gray-300 pt-8 pl-8 pb-4 relative overflow-auto">
-    
-    <div className="h-[640px] flex gap-6 overflow--yauto">
+    <div className=" h-[cal(100% - 100px)] bg-gray-300 pt-8 pl-8 pb-4 flex gap-6 overflow-y-auto">
     <Sidebar />
-        <div className=' -ml-3'>
+        <div className=" -ml-3">
       <Navbar />
       <div>
         <select className=" h-7 w-58 text-sm max-sm:w-52  rounded px-2 font-bold text-black mt-3 outline-none">
@@ -18,12 +16,12 @@ const RiskMap = () => {
         </select>
           
         </div>
-        <div className='flex -ml-[150px] gap-2 items-center mt-3'>
+        <div className='flex -ml-[150px] gap-2 items-center mt-2'>
         
-        <img className='h-[80vh] w-full ml-[150px] rounded-lg max-sm:w-[30%] max-sm:h-[75vh]' src={RiskMapimg2} alt="" />
+        <img className='h-[82vh] w-full ml-[150px] rounded-lg max-sm:w-[30%] max-lg:h-[75vh]' src={RiskMapimg2} alt="" />
        
         
-        <div className=' h-[81vh] w-52 border-2 border-black rounded max-sm:h-[75vh] max-sm:w-44'>
+        <div className=' h-[82vh] w-52 border-2 border-black rounded max-lg:h-[75vh] max-sm:w-44'>
         <div className=' text-center bg-black text-gray-300 max-sm:text-sm'>RM-01 : Malicious Insider</div>
         <div className=' ml-1 '>
           <h1 className=' underline font-bold text-sm max-sm:text-[12px]'>Risk Assessment</h1>
@@ -131,7 +129,7 @@ const RiskMap = () => {
         </div>
         </div>
         </div>
-      </div>
+     
     </div>
   )
 }
