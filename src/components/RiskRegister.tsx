@@ -1,17 +1,30 @@
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa6";
 import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
 import { IoDownloadOutline, IoSearchOutline } from "react-icons/io5";
-import { LuClock8 } from "react-icons/lu";
+import { IoIosArrowDropdown, IoIosArrowDropright } from "react-icons/io";
 type CheckboxName = 'selectAll' | 'box1' | 'box2' | 'box3' | 'box4' | 'box5' | 'box6' | 'box7' | 'box8';
-
-type CheckboxState = {
+const boxNames = ['box1', 'box2', 'box3', 'box4', 'box5', 'box6', 'box7', 'box8'] as const;type CheckboxState = {
   [key in CheckboxName]: boolean;
+};
+type BoxName = typeof boxNames[number];
+type DropOpenState = {
+  [key in BoxName]: boolean;
 };
 import Sidebar from "../pages/Sidebar";
 import Navbar from "./Navbar";
+import DropDowns from "./DropDowns";
 const RiskManagement = () => {
+  const [dropOpenState, setDropOpenState] = useState<DropOpenState>(
+    boxNames.reduce((acc, boxName) => ({ ...acc, [boxName]: false }), {} as DropOpenState)
+  );
+  const handleDropToggle = useCallback((boxName: BoxName) => {
+    setDropOpenState(prev => ({
+      ...prev,
+      [boxName]: !prev[boxName]
+    }));
+  }, []);
   const [checkboxes, setCheckboxes] = useState({
     selectAll: false,
     box1: false,
@@ -23,6 +36,8 @@ const RiskManagement = () => {
     box7: false,
     box8: false,
   });
+
+  
  
   const handleSelectAll = useCallback(() => {
     setCheckboxes(prev => {
@@ -104,19 +119,31 @@ const RiskManagement = () => {
             <IoDownloadOutline />
           </div>
         </div>
+    
       </div>
-      <div className="register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
-    <div className="flex h-full items-center justify-between">
+      <div className="register-container-1 h-auto w-full bg-white rounded-lg mt-1 pb-2">
+    <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
-    <input type="checkbox" checked={checkboxes["box1"]}  onChange={()=>handleSingleCheck("box1")} />
+    <input type="checkbox" checked={checkboxes["box1"]} onChange={()=>handleSingleCheck("box1")} />
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
-      <LuClock8 className="mt-2"/>
+    {dropOpenState["box1"] ? (
+                    <IoIosArrowDropdown 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box1")}
+                    />
+                  ) : (
+                    <IoIosArrowDropright 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box1")}
+                    />
+                  )}
+      
       <div className="flex flex-col gap-[4px] mt-3 ml-1">
       <span className=" font-semibold pb-1">Unauthorized System Access</span>
-      <div className="flex gap-[10px]">
+      <div className="flex gap-[6px]">
         <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
           <span className=" text-[10px] absolute left-4 top-[2px]">CyD-1</span>
         </div>
@@ -142,9 +169,13 @@ const RiskManagement = () => {
     </div>
     </div>
     </div>
-
-      </div>
-      <div className="register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
+    <div>
+     {dropOpenState["box1"] ? (
+        <DropDowns />
+      ) : (<></>)}
+   </div>
+    </div>
+      <div className="register-container-2 h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
@@ -152,7 +183,18 @@ const RiskManagement = () => {
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
-      <LuClock8 className="mt-2"/>
+    {dropOpenState["box2"] ? (
+                    <IoIosArrowDropdown 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box2")}
+                    />
+                  ) : (
+                    <IoIosArrowDropright 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box2")}
+                    />
+                  )}
+      
       <div className="flex flex-col gap-[4px] mt-3 ml-1">
       <span className=" font-semibold pb-1">Weak Authentication</span>
       <div className="flex gap-[6px]">
@@ -181,9 +223,13 @@ const RiskManagement = () => {
     </div>
     </div>
     </div>
-
-      </div>
-      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
+    <div>
+     {dropOpenState["box2"] ? (
+        <DropDowns />
+      ) : (<></>)}
+   </div>
+    </div>
+      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
@@ -191,7 +237,17 @@ const RiskManagement = () => {
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
-      <LuClock8 className="mt-2"/>
+    {dropOpenState["box3"] ? (
+                    <IoIosArrowDropdown 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box3")}
+                    />
+                  ) : (
+                    <IoIosArrowDropright 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box3")}
+                    />
+                  )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
       <span className=" font-semibold pb-1">Critical System Dependencies - DoS</span>
       <div className="flex gap-[6px]">
@@ -218,9 +274,13 @@ const RiskManagement = () => {
     
     </div>
     </div>
-
+    <div>
+     {dropOpenState["box3"] ? (
+        <DropDowns />
+      ) : (<></>)}
+   </div>
       </div>
-      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
@@ -228,7 +288,19 @@ const RiskManagement = () => {
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
-      <LuClock8 className="mt-2"/>
+    {dropOpenState["box4"] ? (
+                    <IoIosArrowDropdown 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box4")}
+                    />
+                  ) : (
+                   
+                    <IoIosArrowDropright 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box4")}
+                    />
+                    
+                  )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
       <span className=" font-semibold pb-1">Exposure - Zero-day Attack</span>
       <div className="flex gap-[6px]">
@@ -245,6 +317,7 @@ const RiskManagement = () => {
       </div>
       </div>
       </div>
+     
     <div className="flex items-center gap-8 mr-[70px]">
     <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400">15</div>
     <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500">-</div>
@@ -255,9 +328,14 @@ const RiskManagement = () => {
     
     </div>
     </div>
+   <div>
+     {dropOpenState["box4"] ? (
+        <DropDowns />
+      ) : (<></>)}
+   </div>
 
       </div>
-      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
@@ -265,7 +343,17 @@ const RiskManagement = () => {
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
-      <LuClock8 className="mt-2"/>
+    {dropOpenState["box5"] ? (
+                    <IoIosArrowDropdown 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box5")}
+                    />
+                  ) : (
+                    <IoIosArrowDropright 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box5")}
+                    />
+                  )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
       <span className=" font-semibold pb-1">Physical Security - Theft</span>
       <div className="flex gap-[6px]">
@@ -293,8 +381,13 @@ const RiskManagement = () => {
     </div>
     </div>
 
+    <div>
+     {dropOpenState["box5"] ? (
+        <DropDowns />
+      ) : (<></>)}
+   </div>
       </div>
-      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
@@ -302,7 +395,17 @@ const RiskManagement = () => {
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
-      <LuClock8 className="mt-2"/>
+    {dropOpenState["box6"] ? (
+                    <IoIosArrowDropdown 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box6")}
+                    />
+                  ) : (
+                    <IoIosArrowDropright 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box6")}
+                    />
+                  )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
       <span className=" font-semibold pb-1">Business Continuity - Lack of Contingency</span>
       <div className="flex gap-[6px]">
@@ -329,9 +432,13 @@ const RiskManagement = () => {
     
     </div>
     </div>
-
+    <div>
+     {dropOpenState["box6"] ? (
+        <DropDowns />
+      ) : (<></>)}
+   </div>
       </div>
-      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
@@ -339,7 +446,17 @@ const RiskManagement = () => {
     <span className={`custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500`}></span>
     
     </label>
-      <LuClock8 className="mt-2"/>
+    {dropOpenState["box7"] ? (
+                    <IoIosArrowDropdown 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box7")}
+                    />
+                  ) : (
+                    <IoIosArrowDropright
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box7")}
+                    />
+                  )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
       <span className=" font-semibold pb-1">Risky Software Supply Chain</span>
       <div className="flex gap-[6px]">
@@ -366,9 +483,13 @@ const RiskManagement = () => {
     
     </div>
     </div>
-
+    <div>
+     {dropOpenState["box7"] ? (
+        <DropDowns />
+      ) : (<></>)}
+   </div>
       </div>
-      <div className=" register-container h-[69px] w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
@@ -376,7 +497,17 @@ const RiskManagement = () => {
     <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
     
     </label>
-      <LuClock8 className="mt-2"/>
+    {dropOpenState["box8"] ? (
+                    <IoIosArrowDropdown 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box8")}
+                    />
+                  ) : (
+                    <IoIosArrowDropright 
+                      className="mt-2 text-xl cursor-pointer" 
+                      onClick={() => handleDropToggle("box8")}
+                    />
+                  )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
       <span className=" font-semibold pb-1">Network Management - Advance Persistence Threats</span>
       <div className="flex gap-[6px]">
@@ -400,10 +531,13 @@ const RiskManagement = () => {
       <div className=" h-3 w-3 rounded-full bg-red-400"></div>
       <span>Mitigate</span>
     </div>
-    
     </div>
     </div>
-
+    <div>
+     {dropOpenState["box8"] ? (
+        <DropDowns />
+      ) : (<></>)}
+   </div>
       </div>
       <div className="flex justify-between mt-1">
         <div className=" h-10 w-20 rounded-lg text-gray-400 bg-white text-[12px] text-center flex items-center justify-center cursor-pointer">
