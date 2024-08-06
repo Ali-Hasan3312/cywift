@@ -171,7 +171,10 @@ const RiskManagement = () => {
     </div>
     <div>
      {dropOpenState["box1"] ? (
-        <DropDowns />
+        <DropDowns controlInfo={{RiskTitle:"Unauthorized System Access", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
+        RiskSummery={{PredictedRisk:15,Probability:30,InheritedRisk:50}} ProbabilityAssessment={{Probability:40}}
+        RiskTreatment={{Treatment:"",RiskOwner:"",RiskReviewer:"",ControlMapping:"",OwnerId:"CyID-128", RiskId:"CyID-129",OwnerValue:25,ReviewerValue:35}}
+        />
       ) : (<></>)}
    </div>
     </div>
@@ -225,7 +228,10 @@ const RiskManagement = () => {
     </div>
     <div>
      {dropOpenState["box2"] ? (
-        <DropDowns />
+        <DropDowns controlInfo={{RiskTitle:"Unauthorized System Access", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
+        RiskSummery={{PredictedRisk:15,Probability:30,InheritedRisk:50}} ProbabilityAssessment={{Probability:40}}
+        RiskTreatment={{Treatment:"",RiskOwner:"",RiskReviewer:"",ControlMapping:"",OwnerId:"CyID-128", RiskId:"CyID-129",OwnerValue:25,ReviewerValue:35}}
+        />
       ) : (<></>)}
    </div>
     </div>
@@ -276,7 +282,11 @@ const RiskManagement = () => {
     </div>
     <div>
      {dropOpenState["box3"] ? (
-        <DropDowns />
+        <DropDowns
+        controlInfo={{RiskTitle:"Unauthorized System Access", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
+        RiskSummery={{PredictedRisk:15,Probability:30,InheritedRisk:50}} ProbabilityAssessment={{Probability:40}}
+        RiskTreatment={{Treatment:"",RiskOwner:"",RiskReviewer:"",ControlMapping:"",OwnerId:"CyID-128", RiskId:"CyID-129",OwnerValue:25,ReviewerValue:35}}
+        />
       ) : (<></>)}
    </div>
       </div>
@@ -330,7 +340,11 @@ const RiskManagement = () => {
     </div>
    <div>
      {dropOpenState["box4"] ? (
-        <DropDowns />
+        <DropDowns 
+        controlInfo={{RiskTitle:"Unauthorized System Access", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
+        RiskSummery={{PredictedRisk:15,Probability:30,InheritedRisk:50}} ProbabilityAssessment={{Probability:40}}
+        RiskTreatment={{Treatment:"",RiskOwner:"",RiskReviewer:"",ControlMapping:"",OwnerId:"CyID-128", RiskId:"CyID-129",OwnerValue:25,ReviewerValue:35}}
+        />
       ) : (<></>)}
    </div>
 
@@ -383,7 +397,11 @@ const RiskManagement = () => {
 
     <div>
      {dropOpenState["box5"] ? (
-        <DropDowns />
+        <DropDowns 
+        controlInfo={{RiskTitle:"Unauthorized System Access", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
+        RiskSummery={{PredictedRisk:15,Probability:30,InheritedRisk:50}} ProbabilityAssessment={{Probability:40}}
+        RiskTreatment={{Treatment:"",RiskOwner:"",RiskReviewer:"",ControlMapping:"",OwnerId:"CyID-128", RiskId:"CyID-129",OwnerValue:25,ReviewerValue:35}}
+        />
       ) : (<></>)}
    </div>
       </div>
@@ -434,7 +452,11 @@ const RiskManagement = () => {
     </div>
     <div>
      {dropOpenState["box6"] ? (
-        <DropDowns />
+        <DropDowns 
+        controlInfo={{RiskTitle:"Unauthorized System Access", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
+        RiskSummery={{PredictedRisk:15,Probability:30,InheritedRisk:50}} ProbabilityAssessment={{Probability:40}}
+        RiskTreatment={{Treatment:"",RiskOwner:"",RiskReviewer:"",ControlMapping:"",OwnerId:"CyID-128", RiskId:"CyID-129",OwnerValue:25,ReviewerValue:35}}
+        />
       ) : (<></>)}
    </div>
       </div>
@@ -485,7 +507,11 @@ const RiskManagement = () => {
     </div>
     <div>
      {dropOpenState["box7"] ? (
-        <DropDowns />
+        <DropDowns
+        controlInfo={{RiskTitle:"Unauthorized System Access", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
+        RiskSummery={{PredictedRisk:15,Probability:30,InheritedRisk:50}} ProbabilityAssessment={{Probability:40}}
+        RiskTreatment={{Treatment:"",RiskOwner:"",RiskReviewer:"",ControlMapping:"",OwnerId:"CyID-128", RiskId:"CyID-129",OwnerValue:25,ReviewerValue:35}}
+        />
       ) : (<></>)}
    </div>
       </div>
@@ -535,7 +561,11 @@ const RiskManagement = () => {
     </div>
     <div>
      {dropOpenState["box8"] ? (
-        <DropDowns />
+        <DropDowns 
+        controlInfo={{RiskTitle:"Unauthorized System Access", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
+        RiskSummery={{PredictedRisk:15,Probability:30,InheritedRisk:50}} ProbabilityAssessment={{Probability:40}}
+        RiskTreatment={{Treatment:"",RiskOwner:"",RiskReviewer:"",ControlMapping:"",OwnerId:"CyID-128", RiskId:"CyID-129",OwnerValue:25,ReviewerValue:35}}
+        />
       ) : (<></>)}
    </div>
       </div>
