@@ -2,10 +2,8 @@ import { ChangeEvent, useCallback, useState } from "react";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa6";
 import RiskTrendChart from "./chart";
 
-type CheckboxName = 'selectAll' | 'box1' | 'box2' | 'box3' | 'box4' | 'box5' | 'box6' | 'box7' | 'box8';
-const boxNames = ['box1', 'box2', 'box3', 'box4', 'box5', 'box6', 'box7', 'box8'] as const;type CheckboxState = {
-  [key in CheckboxName]: boolean;
-};
+
+const boxNames = ['box1', 'box2', 'box3', 'box4', 'box5', 'box6', 'box7', 'box8'] 
 type BoxName = typeof boxNames[number];
 type DropOpenState = {
   [key in BoxName]: boolean;
@@ -51,8 +49,8 @@ export type DropDownsProps = {
 const DropDowns = ({
     controlInfo,
     RiskSummery,
-    ProbabilityAssessment,
-    RiskTreatment
+    // ProbabilityAssessment,
+    // RiskTreatment
 }: DropDownsProps) => {
     const [dropOpenState, setDropOpenState] = useState<DropOpenState>(
         boxNames.reduce((acc, boxName) => ({ ...acc, [boxName]: true }), {} as DropOpenState)
