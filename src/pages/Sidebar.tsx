@@ -34,30 +34,32 @@ const Sidebar = () => {
         </button>
       )}
        
-      <div className=" h-[110vh] pb-2 w-[13vw] pt-4 bg-black rounded-md relative -ml-8 -mt-6 overflow-hidden z-10"
+      <div className=" h-[110vh] pb-2 w-[13vw] bg-black rounded-md relative -ml-8 -mt-6 overflow-hidden z-10"
       style={
         phoneActive
           ? {
-              width: "12rem",
+              width: "14rem",
               height: "700px",
               position: "fixed",
               top: 0,
               left: showModal ? "0" : "-20rem",
               transition: "all 0.5s",
-              paddingLeft: "40px"
+              paddingLeft: "40px",
+              marginTop: "3px",
+              paddingBottom: "4px"
             }
           : {}
       }>
              <Link to={"/"}>
-            <img className=" h-12 w-32 mx-auto max-sm:h-10 max-sm:w-24 max-sm:mt-3 max-sm:pt-2" src="https://cdn.prod.website-files.com/6565124c786d4f76eddcae02/656c4f79faeb86dd4a1a7b85_image%20476.svg" alt="" />
+            <img className=" h-12 w-32 mx-auto  max-sm:h-10 max-sm:w-24 max-sm:mt-1" src="https://cdn.prod.website-files.com/6565124c786d4f76eddcae02/656c4f79faeb86dd4a1a7b85_image%20476.svg" alt="" />
              </Link>
             <div className="flex items-center">
-          <select className="h-[30px] rounded-md w-[92%] mt-4 mx-auto bg-gray-300 outline-none flex cursor-pointer gap-2 items-center justify-center appearance-none relative text-center max-sm:w-[130px]">
+          <select className="h-[30px] rounded-md w-[90%] mt-4 mx-auto bg-gray-300 outline-none flex cursor-pointer gap-2 items-center justify-center appearance-none relative text-center ">
             <option className=" text-sm font-normal max-sm:text-[10px]">Alpha Inc.</option>
             <option className=" text-sm font-normal max-sm:text-[10px]">option-1</option>
             <option className=" text-sm font-normal max-sm:text-[10px]">option-2</option>
             </select>
-            <div className="flex flex-col gap-[2px] justify-center items-center absolute right-5 top-[89px] max-sm:top-[78px]">
+            <div className="flex flex-col gap-[2px] justify-center items-center absolute right-5 top-[75px] max-sm:top-[70px]">
                     <div className=" w-4 border border-black"></div>
                     <div className=" w-3 border border-black"></div>
                     <div className=" w-2 border border-black"></div>
