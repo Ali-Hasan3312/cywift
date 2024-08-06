@@ -1,9 +1,12 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa6";
 import { HiOutlineAdjustmentsVertical } from "react-icons/hi2";
-import { IoDownloadOutline, IoSearchOutline } from "react-icons/io5";
 import { IoIosArrowDropdown, IoIosArrowDropright } from "react-icons/io";
+import { IoDownloadOutline, IoSearchOutline } from "react-icons/io5";
+import Sidebar from "../pages/Sidebar";
+import DropDowns from "./DropDowns";
+import Navbar from "./Navbar";
 type CheckboxName = 'selectAll' | 'box1' | 'box2' | 'box3' | 'box4' | 'box5' | 'box6' | 'box7' | 'box8';
 const boxNames = ['box1', 'box2', 'box3', 'box4', 'box5', 'box6', 'box7', 'box8'] as const;type CheckboxState = {
   [key in CheckboxName]: boolean;
@@ -12,9 +15,6 @@ type BoxName = typeof boxNames[number];
 type DropOpenState = {
   [key in BoxName]: boolean;
 };
-import Sidebar from "../pages/Sidebar";
-import Navbar from "./Navbar";
-import DropDowns from "./DropDowns";
 const RiskManagement = () => {
   const [dropOpenState, setDropOpenState] = useState<DropOpenState>(
     boxNames.reduce((acc, boxName) => ({ ...acc, [boxName]: false }), {} as DropOpenState)
