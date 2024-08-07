@@ -105,9 +105,7 @@ const RiskManagement = () => {
     Select All
     </label>
       </div>
-      
         <span className=" text-white cursor-pointer text-[17px] text-opacity-90 font-normal ml-10 hover:text-green-400 hover:transition-all hover:duration-300">Risk Register</span>
-      
         <div className=" border border-r-[1px] ml-2 h-4 opacity-85"></div>
         <span className=" text-white cursor-pointer text-[17px] font-normal ml-4 hover:text-green-400 hover:transition-all hover:duration-300 text-opacity-90">Risk Library</span>
         <div className=" h-8 w-[545px] ml-5 flex items-center gap-2">
@@ -116,7 +114,7 @@ const RiskManagement = () => {
           <input type="text" className=" w-full outline-none px-4 border-none bg-inherit h-4 text-[12px] font-light" placeholder="Search by Risk name or code" />
           </div>
           <div className=" text-white text-opacity-90 ml-4 cursor-pointer hover:text-green-400">
-            <IoDownloadOutline />
+          <IoDownloadOutline />
           </div>
         </div>
     
@@ -173,7 +171,7 @@ const RiskManagement = () => {
     </div>
     </div>
     </div>
-    <div className={`transition-all ease-in-out duration-700 ${dropOpenState["box1"]? 'translate-x-0' : '-translate-x-full'}`}>
+    <div className={``}>
      {dropOpenState["box1"] ? (
         <DropDowns controlInfo={{RiskTitle:"Unauthorized System Access", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
         RiskSummery={{PredictedRisk:15, Probability:30, InheritedRisk:50}} ProbabilityAssessment={{Probability:40}}
@@ -230,7 +228,7 @@ const RiskManagement = () => {
     </div>
     </div>
     </div>
-    <div className={`transition-all ease-in-out duration-700 ${dropOpenState["box2"]? 'translate-x-0' : '-translate-x-full'}`}>
+    <div className={``}>
      {dropOpenState["box2"] ? (
         <DropDowns controlInfo={{RiskTitle:"Weak Authentication", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
         RiskSummery={{PredictedRisk:20, Probability:35, InheritedRisk:55}} ProbabilityAssessment={{Probability:45}}
@@ -284,7 +282,7 @@ const RiskManagement = () => {
     
     </div>
     </div>
-    <div className={`transition-all ease-in-out duration-700 ${dropOpenState["box3"]? 'translate-x-0' : '-translate-x-full'}`}>
+    <div className={``}>
      {dropOpenState["box3"] ? (
         <DropDowns
         controlInfo={{RiskTitle:"Critical System Dependencies - Do", RiskCategory: "Dependencies", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -342,7 +340,7 @@ const RiskManagement = () => {
     
     </div>
     </div>
-    <div className={`transition-all ease-in-out duration-700 ${dropOpenState["box4"]? 'translate-x-0' : '-translate-x-full'}`}>
+    <div className={``}>
      {dropOpenState["box4"] ? (
         <DropDowns 
         controlInfo={{RiskTitle:"Exposure - Zero-day Attack", RiskCategory: "Exposure Attack", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -399,7 +397,7 @@ const RiskManagement = () => {
     </div>
     </div>
 
-    <div className={`transition-all ease-in-out duration-700 ${dropOpenState["box5"]? 'translate-x-0' : '-translate-x-full'}`}>
+    <div className={``}>
      {dropOpenState["box5"] ? (
         <DropDowns 
         controlInfo={{RiskTitle:"Physical Security - Theft", RiskCategory: "Privacy", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -454,7 +452,7 @@ const RiskManagement = () => {
     
     </div>
     </div>
-    <div className={`transition-all ease-in-out duration-700 ${dropOpenState["box6"]? 'translate-x-0' : '-translate-x-full'}`}>
+    <div className={``}>
      {dropOpenState["box6"] ? (
         <DropDowns 
         controlInfo={{RiskTitle:"Business Continuity - Lack of Contingency", RiskCategory: "Business Continuity", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -509,7 +507,7 @@ const RiskManagement = () => {
     
     </div>
     </div>
-    <div className={`transition-all ease-in-out duration-700 ${dropOpenState["box7"]? 'translate-x-0' : '-translate-x-full'}`}>
+    <div className={``}>
      {dropOpenState["box7"] ? (
         <DropDowns
         controlInfo={{RiskTitle:"Risky Software Supply Chain", RiskCategory: "Software Risk", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -563,7 +561,7 @@ const RiskManagement = () => {
     </div>
     </div>
     </div>
-    <div className={`transition-all ease-in-out duration-700 ${dropOpenState["box8"]? 'translate-x-0' : '-translate-x-full'}`}>
+    <div className={``}>
      {dropOpenState["box8"] ? (
         <DropDowns 
         controlInfo={{RiskTitle:"Network Management - Advance Persistence Threats", RiskCategory: "Network", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}

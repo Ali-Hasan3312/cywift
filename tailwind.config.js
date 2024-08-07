@@ -11,7 +11,16 @@ export default {
         'custom-red': '#f70c0c',
         'custom-yellow': '#f3f70c',
 
-      }
+      },
+      keyframes: {
+        'slide-up': {
+          '0%': { transform: 'translateY(20%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+      animation: {
+        'slide-up': 'slide-up 0.9s ease-in-out forwards',
+      },
     },
   },
   plugins: [],
