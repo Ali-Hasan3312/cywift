@@ -69,7 +69,7 @@ const DropDowns = ({
     setValue(parseInt(e.target.value, 10));
   };
     return (
-        <div className='h-full w-[90%] pb-4 pt-2 mx-auto mt-2 bg-gray-300 rounded-lg flex flex-col'>
+        <div className='h-full w-[90%] animate-slide-up pb-4 pt-2 mx-auto mt-2 bg-gray-300 rounded-lg flex flex-col'>
             <div className="flex items-center gap-6 font-bold pl-2 h-auto py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2 relative max-w-[95%]"  >
                 {
                    dropOpenState["box1"] ? (
