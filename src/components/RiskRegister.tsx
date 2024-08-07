@@ -95,7 +95,7 @@ const RiskManagement = () => {
         <span className=" text-[13px] font-medium cursor-pointer opa hover:text-green-500 hover:transition-all hover:duration-300">Physical Access</span>
       </div>
       </div>
-      <div className=" h-screen w-full flex flex-col gap-1">
+      <div className=" h-screen w-full flex flex-col gap-1 overflow-auto">
       <div className="flex items-center h-10 py-[22px] w-full gap-2 bg-black rounded-lg">
       <div className="">
       <label className="custom-checkbox-container text-white cursor-pointer flex items-center ml-10 font-normal text-sm"
