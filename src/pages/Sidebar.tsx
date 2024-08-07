@@ -8,6 +8,7 @@ import { MdInfoOutline, MdOutlineInventory2 } from "react-icons/md";
 import { PiNotepadThin } from "react-icons/pi";
 import { RiBookLine, RiFileList2Fill, RiThunderstormsLine } from "react-icons/ri";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
+import { BiMenuAltRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
 const Sidebar = () => {
     const [showModal, setShowModal] = useState<boolean>(false);
@@ -53,18 +54,18 @@ const Sidebar = () => {
              <Link to={"/"}>
             <img className=" h-12 w-32 mx-auto  max-sm:h-10 max-sm:w-24 max-sm:mt-1" src="https://cdn.prod.website-files.com/6565124c786d4f76eddcae02/656c4f79faeb86dd4a1a7b85_image%20476.svg" alt="" />
              </Link>
-            <div className="flex items-center">
-          <select className="h-[30px] rounded-md w-[90%] mt-4 mx-auto bg-gray-300 outline-none flex cursor-pointer gap-2 items-center justify-center appearance-none relative text-center ">
+            <div className="h-[39px] flex items-center w-[90%] relative">
+         
+          <select className=" rounded-md w-full mt-4 mx-auto outline-none bg-gray-300  flex cursor-pointer gap-2 items-center justify-center appearance-none text-center ">
             <option className=" text-sm font-normal max-sm:text-[10px]">Alpha Inc.</option>
             <option className=" text-sm font-normal max-sm:text-[10px]">option-1</option>
             <option className=" text-sm font-normal max-sm:text-[10px]">option-2</option>
             </select>
-            <div className="flex flex-col gap-[2px] justify-center items-center absolute right-5 top-[75px] max-sm:top-[70px]">
-                    <div className=" w-4 border border-black"></div>
-                    <div className=" w-3 border border-black"></div>
-                    <div className=" w-2 border border-black"></div>
+            <div className="absolute inset-y-1 top-5 right-2 flex flex-col  text-black gap-[2px] justify-center items-center">
+                   <BiMenuAltRight className="text-2xl"/>
                     
                 </div>
+          
             </div>
             <div className=" border mt-4 w-[150px] mx-auto border-gray-500"></div>
             <div className=" text-gray-200 flex items-center gap-2 ml-2 mt-4 hover:text-green-400">
