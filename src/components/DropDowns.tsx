@@ -1,7 +1,9 @@
 import { ChangeEvent, useCallback, useState } from "react";
 import { FaAngleDown, FaAngleRight } from "react-icons/fa6";
 import RiskTrendChart from "./chart";
-
+import { CiUser } from "react-icons/ci";
+import { GrEdit } from "react-icons/gr";
+import { RxCrossCircled } from "react-icons/rx";
 
 const boxNames = ['box1', 'box2', 'box3', 'box4', 'box5', 'box6', 'box7', 'box8'] 
 type BoxName = typeof boxNames[number];
@@ -49,8 +51,8 @@ export type DropDownsProps = {
 const DropDowns = ({
     controlInfo,
     RiskSummery,
-    // ProbabilityAssessment,
-    // RiskTreatment
+    ProbabilityAssessment,
+    RiskTreatment
 }: DropDownsProps) => {
     const [dropOpenState, setDropOpenState] = useState<DropOpenState>(
         boxNames.reduce((acc, boxName) => ({ ...acc, [boxName]: true }), {} as DropOpenState)
@@ -68,52 +70,68 @@ const DropDowns = ({
   };
     return (
         <div className='h-full w-[90%] pb-4 pt-2 mx-auto mt-2 bg-gray-300 rounded-lg flex flex-col'>
-            <div className="flex items-center gap-6 font-bold pl-2 h-auto py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2 relative"  >
+            <div className="flex items-center gap-6 font-bold pl-2 h-auto py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2 relative max-w-[95%]"  >
                 {
                    dropOpenState["box1"] ? (
                     <>
+                   <div className="flex items-center gap-5 transition-all ease-out duration-500 translate-y-[10%]">
                     <FaAngleRight className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box1")} />
-                    <h1>Control Information</h1>
+                    <h1 className=" font-bold">Control Information</h1>
+                    </div>
                    
                     </>
                    ) : (
                     <>
+                   <div className="transition-all ease-out duration-500 translate-y-0">
                   <div className="absolute top-2 left-2 flex items-center gap-2 font-bold text-lg">
                   <FaAngleDown className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box1")}/>
                   <h1 className="">Control Information</h1>
                   </div>
-                    <div className="flex flex-wrap mt-6">
-                          <div className=" w-[230px] h-auto">
+                  <div className=" h-6 w-6 border border-gray-500 cursor-pointer text-sm absolute top-2 right-2 rounded-full flex items-center justify-center">
+                  <GrEdit className=" text-gray-500"/>
+                  </div>
+                    <div className="flex flex-wrap items-center mt-6 gap-8 ml-6 pb-2">
+                      <div className="flex flex-col gap-4 w-[30vw]">
+                      <div className="flex items-center gap-12">
+                        <div className="h-auto">
                          <h3 className="flex text-[12px] font-bold">Risk Title<span className=" text-red-600">*</span></h3>
                          <span className=" text-[14px]">{controlInfo.RiskTitle}</span>
                             </div>                       
-                        <div className=" w-[230px] h-auto">
+                        <div className="h-auto">
                         <h3 className="flex text-[12px] font-bold">Risk Category</h3>
                         <span className=" text-[14px]">{controlInfo.RiskCategory}</span>
                         </div>
-                        <div className=" -ml-20">
-                        <h3 className="flex text-[12px] font-bold">Control Description<span className=" text-red-600">*</span></h3>
-                        <div className=" h-auto w-[400px] border border-black text-sm p-2 rounded-lg ">
-                        <p>{controlInfo.ControlDescription}</p>
                         </div>
-                        </div>
+                     
                        
-                        <div className=" w-[230px] h-auto">
+                        <div className="flex items-center gap-[180px]">
+                       <div className=" h-auto">
                         <h3 className="flex text-[12px] font-bold">Risk Code</h3>
                         <span className=" text-[14px]">{controlInfo.RiskCode}</span>
                         </div>
-                        <div className=" w-[230px] h-auto">
+                        <div className="h-auto">
                         <h3 className="flex text-[12px] font-bold">Vulnarability</h3>
                         <span className=" text-[14px]">{controlInfo.Vulnerability}</span>
                         </div>
-                        <div className=" w-[230px] h-auto">
+                       </div>
+                       <div className="flex items-center">
+                       <div className="h-auto">
                         <h3 className="flex text-[12px] font-bold">Supporting Documents</h3>
                         <input type="file" className="text-[14px]"/>
                         </div>
-                        <div className=" w-[230px] h-auto">
+                        <div className="h-auto -ml-12">
                         <h3 className="flex text-[12px] font-bold">Threat</h3>
                         <span className=" text-[14px]">{controlInfo.Threat}</span>
                         </div>
+                       </div>
+                      </div>
+                       <div className="">
+                        <h3 className="flex text-[12px] font-bold">Control Description<span className=" text-red-600">*</span></h3>
+                        <div className=" h-auto w-[25vw] border border-black text-sm p-2 rounded-lg ">
+                        <p>{controlInfo.ControlDescription}</p>
+                        </div>
+                        </div>
+                    </div>
                     </div>
                     </>
                    ) 
@@ -121,16 +139,22 @@ const DropDowns = ({
                 
                
             </div>
-            <div className="flex items-center gap-6  relative font-bold pl-2 h- py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2">
+            <div className="flex items-center gap-6  relative font-bold pl-2 h-auto py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2">
             {
                    dropOpenState["box2"] ? (
                     <>
+                   <div className="flex items-center gap-5 transition-all ease-out duration-500 translate-y-[10%]">
+
                     <FaAngleRight className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box2")} /> 
-                        <h1>Risk Summary</h1>
+                        <h1 className=" font-bold">Risk Summary</h1>
+                    </div>
                         </>
                    ): (
 
                     <>
+                   <div className="transition-all ease-out duration-500 translate-y-0">
+
+                 
                    <div className="absolute top-2 left-2 flex items-center gap-6 font-bold text-lg">
 
                     <FaAngleDown className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box2")}/>
@@ -138,7 +162,7 @@ const DropDowns = ({
                     </div>
                     <div className="flex gap-4 mt-8 pl-4">
                        <div>
-                      <div className="">
+                      <div className=" mt-4">
                       <h3 className="text-[14px] font-bold mb-2">Risk Calculation</h3>
                      
                       </div>
@@ -172,6 +196,7 @@ const DropDowns = ({
                        <RiskTrendChart />
                        </div>
                     </div>
+                    </div>
                         </>
                    ) }
                 
@@ -180,15 +205,20 @@ const DropDowns = ({
             {
                    dropOpenState["box3"] ? (
                     <>
+                    <div className="flex items-center gap-5 transition-all ease-out duration-500 translate-y-[10%]">
+
                     <FaAngleRight className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box3")} /> 
-                        <h1>Affected Assets</h1>
+                        <h1 className=" font-bold">Affected Assets</h1>
+                    </div>
                         </>
                    ): (
 
                     <>
-                    
+                    <div className="flex items-center gap-5 transition-all ease-out duration-500 translate-y-0">
+
                     <FaAngleDown className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box3")}/>
-                    <h1>Affected Assets</h1>
+                    <h1 className=" font-bold">Affected Assets</h1>
+                    </div>
                         </>
                    ) }
             </div>
@@ -196,13 +226,16 @@ const DropDowns = ({
             {
                    dropOpenState["box4"] ? (
                     <>
+                       <div className="transition-all ease-in duration-500 flex items-center gap-6 translate-y-[10%]">
+                      
                     <FaAngleRight className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box4")} /> 
-                        <h1>Probability Assessment</h1>
+                        <h1 className=" font-bold">Probability Assessment</h1>
+                    </div>
                         </>
                    ): (
 
                     <>
-                    <div>
+                    <div className="transition-all ease-out duration-500 translate-y-0">
                         <div className=" flex items-center gap-6 absolute top-2 left-2 ">
                         <FaAngleDown className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box4")}/>
                         <h1 className=" font-bold text-lg">Probability Assessment</h1>
@@ -226,18 +259,112 @@ const DropDowns = ({
                         </>
                    ) }
             </div>
-            <div className="flex items-center gap-6  font-bold pl-2 h- py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2">
+            <div className="flex items-center gap-6 relative font-bold pl-2 h- py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2 ">
             {
                    dropOpenState["box5"] ? (
                     <>
+                    <div className="transition-all ease-in duration-500 flex items-center gap-6 translate-y-[10%]">
+
                     <FaAngleRight className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box5")} /> 
-                        <h1>Risk Treatment</h1>
-                        </>
+                        <h1 className=" font-bold">Risk Treatment</h1>
+                    </div>
+                        </> 
                    ): (
 
                     <>
+                    <div className="transition-all ease-out duration-500 translate-y-0">
+
+                    <div className=" flex items-center gap-6 absolute top-2 left-2  ">
+
                     <FaAngleDown className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box5")}/>
-                    <h1>Risk Treatment</h1>
+                    <h1 className=" font-bold text-lg">Risk Treatment</h1>
+                   </div>
+                    
+                    <div className=" mt-8 pt-1 ml-9">
+                      <h3 className=" font-bold text-sm">Select Treatment</h3>
+                     <select className=" h-10 w-[55vw] border rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
+                      <option>Treatment-1</option>
+                      <option>Treatment-2</option>
+                      <option>Treatment-3</option>
+                     </select>
+                     <div className=" border border-gray-300 w-[55vw] mt-4"></div>
+                    </div>
+                    <div className="flex items-center justify-between w-[55vw] mt-3 pt-1 ml-9">
+                      <div>
+                      <h3 className=" font-bold text-sm">Risk Owners</h3>
+                     <select className=" h-10 w-[25vw] border rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
+                      <option>{RiskTreatment.RiskOwner}</option>
+                      <option>Owner-2</option>
+                      <option>Owner-3</option>
+                     </select>
+                     <div className=" h-8 w-[150px] border cursor-pointer border-black mt-4 rounded-[16px] bg-gray-200 flex items-center ">
+                      <div className=" h-8 w-8 bg-black rounded-full text-white flex items-center justify-center text-[24px]">
+                        <CiUser />
+                      </div>
+                      <h4 className="text-[12px] font-bold ml-1">{RiskTreatment.RiskOwner}</h4>
+                     </div>
+                      </div>
+                      <div>
+                      <h3 className=" font-bold text-sm">Risk Reviewers</h3>
+                     <select className=" h-10 w-[25vw] border rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
+                      <option>{RiskTreatment.RiskReviewer}</option>
+                      <option>Reviewer-2</option>
+                      <option>Reviewer-3</option>
+                     </select>
+                     <div className=" h-8 w-[150px] border cursor-pointer border-black mt-4 rounded-[16px] bg-gray-200 flex items-center ">
+                      <div className=" h-8 w-8 bg-black rounded-full text-white flex items-center justify-center text-[24px]">
+                        <CiUser />
+                      </div>
+                      <h4 className="text-[12px] font-bold ml-1">{RiskTreatment.RiskReviewer}</h4>
+                     </div>
+                      </div>
+                    </div>
+                      <div className=" border border-gray-300 w-[55vw] mt-4 ml-9"></div>
+                      <div className=" mt-3 pt-1 ml-9">
+                      <h3 className=" font-bold text-sm">Controls Mapping</h3>
+                     <select className=" h-10 w-[55vw] border rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
+                      <option>Mapping-1</option>
+                      <option>Mapping-2</option>
+                      <option>Mapping-3</option>
+                     </select>
+                    
+                    </div>
+                    <div className="flex items-center">
+
+                    <div className=" h-6 w-24 border ml-9 border-black mt-4 rounded-[16px] bg-green-400 flex items-center justify-between ">
+                     
+                      <h4 className="text-sm font-bold ml-1">{RiskTreatment.OwnerId}</h4>
+                      <RxCrossCircled  className=" text-gray-800 mr-1 cursor-pointer text-[12px]"/>
+                     </div>
+                    <div className=" h-6 w-24 border ml-9 er border-black mt-4 rounded-[16px] bg-green-400 flex items-center justify-between ">
+                     
+                      <h4 className="text-sm font-bold ml-1">{RiskTreatment.RiskId}</h4>
+                      <RxCrossCircled  className=" text-gray-800 mr-1 cursor-pointer text-[12px]"/>
+                     </div>
+                    </div>
+                    <div className=" mt-3 pt-1 ml-9">
+                    <h3 className=" font-bold text-sm">Controls Weightage</h3>
+                   <div className="flex items-center gap-8 text-sm mt-2">
+                   <div className="font-bold">
+                      <h3 >{RiskTreatment.OwnerId}</h3>
+                      <div className=" h-6 w-28 font-bold rounded mt-2 bg-gray-300 flex items-center justify-center">{RiskTreatment.OwnerValue}%</div>
+                    </div>
+                   <div className="font-bold">
+                      <h3>{RiskTreatment.RiskId}</h3>
+                      <div className=" h-6 w-28 font-bold rounded mt-2 bg-gray-300 flex items-center justify-center">
+                        {RiskTreatment.ReviewerValue}%</div>
+                    </div>
+                   <div className="font-bold">
+                      <h3>Residual Risk</h3>
+                      <div className=" h-6 w-28 font-bold rounded mt-2 bg-gray-300 flex items-center justify-center">
+                        {ProbabilityAssessment.Probability}%</div>
+                    </div>
+                   </div>
+                   <div className=" border border-gray-300 w-[55vw] mt-4"></div>
+                   <div className=" mt-4"></div>
+                    </div>
+
+                    </div>
                         </>
                    ) }
             </div>
@@ -245,14 +372,20 @@ const DropDowns = ({
             {
                    dropOpenState["box6"] ? (
                     <>
+                  <div className="transition-all ease-out duration-500 translate-y-[10%] flex items-center gap-5">
+
                     <FaAngleRight className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box6")} /> 
-                        <h1>Notes & Comments</h1>
+                        <h1 className=" font-bold">Notes & Comments</h1>
+                    </div>
                         </>
                    ): (
 
                     <>
+                     <div className="transition-all ease-out duration-500 translate-y-0 flex items-center gap-5">
+
                     <FaAngleDown className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box6")}/>
-                    <h1>Notes & Comments</h1>
+                    <h1 className=" font-bold">Notes & Comments</h1>
+                    </div>
                         </>
                    ) }
             </div>
