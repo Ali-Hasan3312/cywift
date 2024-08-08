@@ -171,7 +171,7 @@ const RiskManagement = () => {
     </div>
     </div>
     </div>
-    <div className={``}>
+    <div className={`${dropOpenState["box1"]? " mt-4" : ""}`}>
      {dropOpenState["box1"] ? (
         <DropDowns controlInfo={{RiskTitle:"Unauthorized System Access", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
         RiskSummery={{PredictedRisk:15, Probability:30, InheritedRisk:50}} ProbabilityAssessment={{Probability:40}}
@@ -179,6 +179,7 @@ const RiskManagement = () => {
         />
       ) : (<></>)}
    </div>
+   <div className={`${dropOpenState["box1"]? " py-2 " : ""}`}></div>
     </div>
       <div className="register-container-2 h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
@@ -228,7 +229,7 @@ const RiskManagement = () => {
     </div>
     </div>
     </div>
-    <div className={``}>
+    <div className={`${dropOpenState["box2"]? " mt-4" : ""}`}>
      {dropOpenState["box2"] ? (
         <DropDowns controlInfo={{RiskTitle:"Weak Authentication", RiskCategory: "Access Control", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
         RiskSummery={{PredictedRisk:20, Probability:35, InheritedRisk:55}} ProbabilityAssessment={{Probability:45}}
@@ -236,6 +237,7 @@ const RiskManagement = () => {
         />
       ) : (<></>)}
    </div>
+   <div className={`${dropOpenState["box2"]? " py-2 " : ""}`}></div>
     </div>
       <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
@@ -282,7 +284,7 @@ const RiskManagement = () => {
     
     </div>
     </div>
-    <div className={``}>
+    <div className={`${dropOpenState["box3"]? " mt-4" : ""}`}>
      {dropOpenState["box3"] ? (
         <DropDowns
         controlInfo={{RiskTitle:"Critical System Dependencies - Do", RiskCategory: "Dependencies", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -291,6 +293,7 @@ const RiskManagement = () => {
         />
       ) : (<></>)}
    </div>
+   <div className={`${dropOpenState["box3"]? " py-2 " : ""}`}></div>
       </div>
       <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
@@ -340,7 +343,7 @@ const RiskManagement = () => {
     
     </div>
     </div>
-    <div className={``}>
+    <div className={`${dropOpenState["box4"]? " mt-4" : ""}`}>
      {dropOpenState["box4"] ? (
         <DropDowns 
         controlInfo={{RiskTitle:"Exposure - Zero-day Attack", RiskCategory: "Exposure Attack", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -349,7 +352,7 @@ const RiskManagement = () => {
         />
       ) : (<></>)}
    </div>
-
+   <div className={`${dropOpenState["box4"]? " py-2 " : ""}`}></div>
       </div>
       <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
@@ -397,7 +400,7 @@ const RiskManagement = () => {
     </div>
     </div>
 
-    <div className={``}>
+    <div className={`${dropOpenState["box5"]? " mt-4" : ""}`}>
      {dropOpenState["box5"] ? (
         <DropDowns 
         controlInfo={{RiskTitle:"Physical Security - Theft", RiskCategory: "Privacy", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -406,6 +409,7 @@ const RiskManagement = () => {
         />
       ) : (<></>)}
    </div>
+   <div className={`${dropOpenState["box5"]? " py-2 " : ""}`}></div>
       </div>
       <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
@@ -452,7 +456,7 @@ const RiskManagement = () => {
     
     </div>
     </div>
-    <div className={``}>
+    <div className={`${dropOpenState["box6"]? " mt-4" : ""}`}>
      {dropOpenState["box6"] ? (
         <DropDowns 
         controlInfo={{RiskTitle:"Business Continuity - Lack of Contingency", RiskCategory: "Business Continuity", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -461,6 +465,7 @@ const RiskManagement = () => {
         />
       ) : (<></>)}
    </div>
+   <div className={`${dropOpenState["box6"]? " py-2 " : ""}`}></div>
       </div>
       <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
@@ -507,7 +512,7 @@ const RiskManagement = () => {
     
     </div>
     </div>
-    <div className={``}>
+    <div className={`${dropOpenState["box7"]? " mt-4" : ""}`}>
      {dropOpenState["box7"] ? (
         <DropDowns
         controlInfo={{RiskTitle:"Risky Software Supply Chain", RiskCategory: "Software Risk", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -516,8 +521,9 @@ const RiskManagement = () => {
         />
       ) : (<></>)}
    </div>
+   <div className={`${dropOpenState["box7"]? " py-2 " : ""}`}></div>
       </div>
-      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
       <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
@@ -561,7 +567,7 @@ const RiskManagement = () => {
     </div>
     </div>
     </div>
-    <div className={``}>
+    <div className={`${dropOpenState["box8"]? " mt-4" : ""}`}>
      {dropOpenState["box8"] ? (
         <DropDowns 
         controlInfo={{RiskTitle:"Network Management - Advance Persistence Threats", RiskCategory: "Network", ControlDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", RiskCode: "RM-001", Vulnerability: "Weak Authentication", Threat: "Espionage"}}
@@ -570,6 +576,7 @@ const RiskManagement = () => {
         />
       ) : (<></>)}
    </div>
+     <div className={`${dropOpenState["box8"]? " py-3 " : " py-2"}`}></div>
       </div>
       <div className="flex justify-between mt-1">
         <div className=" h-10 w-20 rounded-lg text-gray-400 bg-white text-[12px] text-center flex items-center justify-center cursor-pointer">
