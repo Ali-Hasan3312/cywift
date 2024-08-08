@@ -17,7 +17,7 @@ const Navbar = () => {
       <div className="h-12 w-[84vw] bg-white flex items-center justify-between rounded-md -mt-6  ">
       <h1 className=" font-medium ml-2 text-2xl max-sm:text-[12px]">Risk Management</h1>
       <div className=" flex items-center mr-4 gap-2 cursor-pointer">
-        <img className=" h-[4vh] w-[15%] rounded-full " src="https://freesvg.org/img/abstract-user-flat-4.png" alt="" />
+        <img className=" h-[32px] w-[15%] rounded-full " src="https://freesvg.org/img/abstract-user-flat-4.png" alt="" />
         
         <select className=" outline-none cursor-pointer border-none  max-sm:text-[11px]">
         <option>Abuzar Gafari</option>

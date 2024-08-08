@@ -12,6 +12,9 @@ export default {
         'custom-yellow': '#f3f70c',
 
       },
+      gridTemplateColumns: {
+        'custom': 'minmax(2rem, 14%) 1fr',
+      },
       keyframes: {
         'slide-up': {
           '0%': { transform: 'translateY(20%)', opacity: '0' },
