@@ -28,8 +28,11 @@ const RiskDashboard = () => {
     </div>
   );
   return (
-    <div className=" h-[cal(100% - 100px)] bg-gray-300 pt-8 pl-8 pb-4 flex gap-6 overflow-y-auto">
+    <div className=" h-screen bg-gray-300 pt-8 pl-8 pb-4 flex gap-6 overflow-y-auto max-sm:overflow-x-hidden">
+      <div className="h-[695px]">
+
     <Sidebar />
+      </div>
         <div className=" -ml-3">
       <Navbar />
       <div className="flex items-center gap-8 max-md:flex-wrap max-sm:gap-2 -mt-1">
@@ -68,11 +71,11 @@ const RiskDashboard = () => {
                 <span className=" text-[9px] text-blue-500 text-center">12</span>
               </div>
               
-            </div>
+            </div>  
         </div>
-        <div className="flex gap-3 max-lg:flex-wrap overflow-hidden">
+        <div className="flex gap-3 w-[84vw] max-lg:flex-wrap overflow-hidden">
         <div>
-        <div className=" h-[378px] w-[302px] bg-white mt-3 rounded-lg">
+        <div className=" h-[386px] w-[302px] max-sm:w-[84vw] bg-white mt-3 rounded-lg">
           <h3 className=" pt-2 pl-4 text-[17px] font-semibold">Risk heatmap</h3>
          <div className="flex mt-8 items-center gap-1 ml-6">
             <span className="px-3 text-[10px]">5</span>
@@ -136,8 +139,8 @@ const RiskDashboard = () => {
          </div>
         </div>
         </div>
-        <div className=" h-auto">
-      <div className="h-[250px] w-[61vw] max-lg:w-full bg-white mt-3 rounded-lg pr-3">
+        <div className=" h-auto w-full">
+      <div className="h-[250px] w-full max-lg:w-full bg-white mt-3 rounded-lg pr-3">
       <h3 className="font-semibold text-[17px] ml-2 -mb-1 pt-1">Category Breakdown</h3>
           <div className=" ml-2">
             <span className=" text-[10px] font-semibold text-blue-500">Governance - Compliance/Legal</span>
@@ -245,7 +248,7 @@ const RiskDashboard = () => {
           </div>
       </div>
       <div className="flex items-center gap-3 mt-3 max-md:flex-wrap h-auto overflow-hidden">
-      <div className=" h-[125px] rounded-md w-[290px] bg-white ">
+      <div className=" h-[125px] rounded-md w-[290px] max-sm:w-[84vw] bg-white ">
           <div className="flex justify-between items-center mr-4">
           <h2 className=" font-bold pt-2 pl-4 text-[17px]">Risk assessment</h2>
           <MdOutlineFileDownload className=" text-[18px] text-gray-600 cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300"/>
@@ -261,7 +264,7 @@ const RiskDashboard = () => {
             </div>
           </div>
         </div>
-        <div className="h-[125px] rounded-md w-[290px] bg-white ">
+        <div className="h-[125px] rounded-md w-[290px] max-sm:w-[84vw] bg-white ">
     <h2 className="font-bold pt-2 pl-4 text-[17px]">Treatment overview</h2>
     <div className="flex flex-row items-center">
         <div className="flex-shrink-0">

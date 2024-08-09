@@ -35,12 +35,12 @@ const Sidebar = () => {
         </button>
       )}
        
-      <div className=" h-[110vh] pb-2 w-[13vw] bg-black rounded-md relative -ml-8 -mt-6 overflow-hidden z-10"
+      <div className=" h-[90%] pb-2 w-[13vw] bg-black rounded-md relative -ml-8 -mt-6 overflow-hidden overflow-y-auto z-10"
       style={
         phoneActive
           ? {
               width: "14rem",
-              height: "100%",
+              height: "80%",
               position: "fixed",
               top: 0,
               left: showModal ? "0" : "-20rem",

@@ -60,113 +60,117 @@ const RiskManagement = () => {
   
   return (
     <div className=" h-screen bg-gray-300 pt-8 pl-8 pb-4 flex gap-10 overflow-y-auto">
+    <div className="h-[899px]">
+
     <Sidebar />
-        <div className=" -ml-7">
+    </div>
+        <div className=" -ml-7 max-sm:-ml-8">
       <Navbar />
-    <div className="flex h-[525px] mt-2 gap-2">
-      <div className=" h-[93vh] w-[150px] bg-white rounded-lg">
-      <div className="flex items-center h-[42px] w-full bg-black rounded-lg cursor-pointer">
+    <div className="flex h-[93vh] mt-2 gap-2 max-sm:-ml-8">
+      <div className=" h-[704px] w-[150px] max-sm:w-[100px] max-sm:h-[542px] bg-white rounded-lg">
+      <div className="flex items-center h-[42px] w-full bg-black rounded-lg cursor-pointer max-sm:text-sm">
        <HiOutlineAdjustmentsVertical className=" text-white ml-2" />
-       <span className=" ml-10 text-white font-[300] text-[16px] text-opacity-90">All Risks</span>
+       <span className=" ml-10 text-white font-[300] text-[16px] max-sm:text-[10px] max-sm:ml-2 text-opacity-90">All Risks</span>
       </div>
       <div className="flex flex-col gap-3 mt-2 ml-3">
-        <h1 className=" text-[17px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Treatment</h1>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Accepted</span>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Mitigate</span>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Avoided</span>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Transferred</span>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Needs Treatment</span>
+        <h1 className=" text-[17px] max-sm:text-[11px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300">Treatment</h1>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Accepted</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Mitigate</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Avoided</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Transferred</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Needs Treatment</span>
         <div className=" border w-32 border-gray-300 mr-2"></div>
       </div>
       <div className="flex flex-col gap-2 mt-2 ml-3">
-        <h1 className=" text-[17px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Assessment</h1>
+        <h1 className=" text-[17px] max-sm:text-[11px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300">Assessment</h1>
        
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Scored</span>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Not Scored</span>
+        <span className=" text-[13px] max-sm:text-[8px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300">Scored</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Not Scored</span>
         <div className=" border w-32 border-gray-300 mr-2"></div>
       </div>
       <div className="flex flex-col gap-2 mt-2 ml-3">
-        <h1 className=" text-[17px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Category</h1>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Assessment</span>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Audits</span>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Acess Control</span>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Asset Management</span>
-        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Governance</span>
-        <span className=" text-[13px] font-medium cursor-pointer opa hover:text-green-500 hover:transition-all hover:duration-300">Physical Access</span>
+        <h1 className=" text-[17px] max-sm:text-[11px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300">Category</h1>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Assessment</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Audits</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Acess Control</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Asset Management</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Governance</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm opa hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Physical Access</span>
       </div>
       </div>
       <div className=" h-screen w-full flex flex-col gap-1 overflow-auto">
-      <div className="flex items-center h-10 py-[22px] w-full gap-2 bg-black rounded-lg">
-      <div className="">
-      <label className="custom-checkbox-container text-white cursor-pointer flex items-center ml-10 font-normal text-sm"
+      <div className="flex items-center justify-between h-10 py-[22px] w-full gap-2 bg-black rounded-lg max-sm:w-[310px]">
+      <div className=" flex items-center">
+      <label className="custom-checkbox-container text-white cursor-pointer max-sm:text-sm flex items-center ml-10 max-sm:ml-2 font-normal text-sm max-sm:text-[8px] max-sm:w-[80px]"
       >
     <input type="checkbox" onChange={handleSelectAll} name="selectAll" />
-    <span className="custom-checkbox h-4 w-4 bg-gray-600 border border-gray-400"></span>
+    <span className="custom-checkbox h-4 w-4 bg-gray-600 border max-sm:h-[10px] max-sm:w-[10px] border-gray-400"></span>
     Select All
     </label>
-      </div>
-        <span className=" text-white cursor-pointer text-[17px] text-opacity-90 font-normal ml-10 hover:text-green-400 hover:transition-all hover:duration-300">Risk Register</span>
-        <div className=" border border-r-[1px] ml-2 h-4 opacity-85"></div>
-        <span className=" text-white cursor-pointer text-[17px] font-normal ml-4 hover:text-green-400 hover:transition-all hover:duration-300 text-opacity-90">Risk Library</span>
-        <div className=" h-8 w-[545px] ml-5 flex items-center gap-2">
-          <div className="border border-gray-400 h-7 bg-gray-800 rounded-md w-[450px] flex items-center gap-2 text-white  ml-8">
-          <IoSearchOutline className=" text-xl ml-2"/>
+     
+        <span className=" text-white cursor-pointer max-sm:text-sm text-[17px] text-opacity-90 font-normal ml-10 hover:text-green-400 hover:transition-all hover:duration-300 max-sm:text-[8px] max-sm:w-[80px] max-sm:-ml-4">Risk Register</span>
+        <div className=" border border-r-[1px] ml-2 h-4 opacity-85 max-sm:h-2 max-sm:-ml-6"></div>
+        <span className=" text-white cursor-pointer max-sm:text-sm text-[17px] font-normal ml-4 hover:text-green-400 hover:transition-all hover:duration-300 text-opacity-90 max-sm:text-[8px] max-sm:w-[80px]">Risk Library</span>
+        </div>
+        <div className=" h-8 w-[545px] ml-5 flex items-center gap-2 max-sm:h-6 max-sm:w-[150px]">
+          <div className="border border-gray-400 h-7 bg-gray-800 rounded-md w-[450px] flex items-center gap-2 text-white  ml-8 max-sm:-ml-[50px] max-sm:h-5 max-sm:w-[80px]">
+          <IoSearchOutline className=" text-xl ml-2 max-sm:text-sm"/>
           <input type="text" className=" w-full outline-none px-4 border-none bg-inherit h-4 text-[12px] font-light" placeholder="Search by Risk name or code" />
           </div>
-          <div className=" text-white text-opacity-90 ml-4 cursor-pointer hover:text-green-400">
+          <div className=" text-white text-opacity-90 ml-4 max-sm:ml-0 cursor-pointer max-sm:text-sm hover:text-green-400">
           <IoDownloadOutline />
           </div>
         </div>
     
       </div>
-      <div className="register-container-1 h-auto w-full bg-white rounded-lg mt-1 pb-2">
+      <div className="register-container-1 h-auto w-full max-sm:w-[342px] max-sm:-ml-8 bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer max-sm:text-sm flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box1"]} onChange={()=>handleSingleCheck("box1")} />
-    <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
+    <span className="custom-checkbox h-4 w-4 bg-gray-300 border max-sm:h-[10px] max-sm:w-[10px] border-gray-500 "></span>
     
     </label>
     {dropOpenState["box1"] ? (
                     <div className=" flex items-center gap-5">
 
                     <IoIosArrowDropdown 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box1")}
                       />
                       
                       </div>
                   ) : (
                     <IoIosArrowDropright 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl max-sm:text-sm cursor-pointer" 
                       onClick={() => handleDropToggle("box1")}
                     />
                   )}
       
       <div className="flex flex-col gap-[4px] mt-3 ml-1">
-      <span className=" font-semibold pb-1">Unauthorized System Access</span>
-      <div className="flex gap-[6px]">
-        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-1</span>
+      <span className=" font-semibold pb-1 max-sm:text-[7px]">Unauthorized System Access</span>
+      <div className="flex gap-[6px] max-sm:gap-[3px]">
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-1</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-2</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-2</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-3</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-3</span>
         </div>
        
       </div>
       </div>
       </div>
-    <div className="flex items-center gap-8 mr-4">
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-red-400 w-7 text-red-400">25</div>
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400">10</div>
-    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-yellow-400 w-24 text-yellow-400 mr-4">
-      <div className=" h-3 w-3 rounded-full bg-yellow-400"></div>
+    <div className="flex items-center gap-8 mr-4 max-sm:-mt-1 max-sm:gap-3 max-sm:ml-2">
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-red-400 w-7 text-red-400 max-sm:h-3 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border">25</div>
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400 max-sm:h-3 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border">10</div>
+    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-yellow-400 w-24 text-yellow-400 mr-4 max-sm:border max-sm:h-5 max-sm:w-16 max-sm:text-[10px]">
+      <div className=" h-3 w-3 rounded-full bg-yellow-400 max-sm:h-[6px] max-sm:w-[6px]"></div>
       <span>Mitigate</span>
     </div>
-    <div className=" text-green-500 mr-2 cursor-pointer">
+    <div className=" text-green-500 mr-2 cursor-pointer max-sm:text-sm max-sm:-ml-4 max-sm:-mt-1">
     <FaUser />
     </div>
     </div>
@@ -181,50 +185,50 @@ const RiskManagement = () => {
    </div>
    <div className={`${dropOpenState["box1"]? " py-2 " : ""}`}></div>
     </div>
-      <div className="register-container-2 h-auto w-full bg-white rounded-lg mt-1 pb-2">
+      <div className="register-container-2 h-auto w-full max-sm:w-[342px] max-sm:-ml-8 bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer max-sm:text-sm flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box2"]} onChange={()=>handleSingleCheck("box2")} />
-    <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
-    
+    <span className="custom-checkbox h-4 w-4  bg-gray-300 border max-sm:h-[10px] max-sm:w-[10px] border-gray-500 "></span>
+
     </label>
     {dropOpenState["box2"] ? (
                     <IoIosArrowDropdown 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box2")}
                     />
                   ) : (
                     <IoIosArrowDropright 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box2")}
                     />
                   )}
       
       <div className="flex flex-col gap-[4px] mt-3 ml-1">
-      <span className=" font-semibold pb-1">Weak Authentication</span>
-      <div className="flex gap-[6px]">
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
+      <span className=" font-semibold pb-1 max-sm:text-[7px]">Weak Authentication</span>
+      <div className="flex gap-[6px] max-sm:gap-[3px]">
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-4</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-5</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-10</span>
         </div>
        
       </div>
       </div>
       </div>
-    <div className="flex items-center gap-8 mr-4">
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400">15</div>
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500">-</div>
-    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4">
-      <div className=" h-3 w-3 rounded-full bg-red-400"></div>
+    <div className="flex items-center gap-8 mr-4 max-sm:-mt-1 max-sm:gap-3 max-sm:ml-2">
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400 max-sm:h-3 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border">15</div>
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border max-sm:h-3">-</div>
+    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4 max-sm:border max-sm:h-5 max-sm:w-16 max-sm:text-[10px]">
+      <div className=" h-3 w-3 rounded-full bg-red-400 max-sm:h-[6px] max-sm:w-[6px]"></div>
       <span>Transfer</span>
     </div>
-    <div className=" text-green-500 mr-2 cursor-pointer">
+    <div className=" text-green-500 mr-2 cursor-pointer max-sm:text-sm max-sm:-ml-4 max-sm:-mt-1">
     <FaUser />
     </div>
     </div>
@@ -239,46 +243,46 @@ const RiskManagement = () => {
    </div>
    <div className={`${dropOpenState["box2"]? " py-2 " : ""}`}></div>
     </div>
-      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full max-sm:w-[342px] max-sm:-ml-8 bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer max-sm:text-sm flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box3"]} onChange={()=>handleSingleCheck("box3")} />
-    <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
+    <span className="custom-checkbox h-4 w-4 bg-gray-300 border max-sm:h-[10px] max-sm:w-[10px] border-gray-500 "></span>
     
     </label>
     {dropOpenState["box3"] ? (
                     <IoIosArrowDropdown 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box3")}
                     />
                   ) : (
                     <IoIosArrowDropright 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box3")}
                     />
                   )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold pb-1">Critical System Dependencies - DoS</span>
-      <div className="flex gap-[6px]">
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
+      <span className=" font-semibold pb-1 max-sm:text-[7px]">Critical System Dependencies - DoS</span>
+      <div className="flex gap-[6px] max-sm:gap-[3px]">
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-4</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-3">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-3 max-sm:left-[6px] max-sm:text-[6px]">CyD-5</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-10</span>
         </div>
        
       </div>
       </div>
       </div>
-    <div className="flex items-center gap-8 mr-[70px]">
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400">15</div>
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500">-</div>
-    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4">
-      <div className=" h-3 w-3 rounded-full bg-red-400"></div>
+    <div className="flex items-center gap-8 mr-[70px] max-sm:-mt-1 max-sm:gap-3 max-sm:ml-2">
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400 max-sm:h-3 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border">15</div>
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border max-sm:h-3">-</div>
+    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4  max-sm:border max-sm:h-5 max-sm:w-16 max-sm:text-[10px]">
+      <div className=" h-3 w-3 rounded-full bg-red-400 max-sm:h-[6px] max-sm:w-[6px]"></div>
       <span>Accept</span>
     </div>
     
@@ -295,49 +299,49 @@ const RiskManagement = () => {
    </div>
    <div className={`${dropOpenState["box3"]? " py-2 " : ""}`}></div>
       </div>
-      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full max-sm:w-[342px] max-sm:-ml-8 bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer max-sm:text-sm flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box4"]} onChange={()=>handleSingleCheck("box4")} />
-    <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
+    <span className="custom-checkbox h-4 w-4 bg-gray-300 border max-sm:h-[10px] max-sm:w-[10px] border-gray-500 "></span>
     
     </label>
     {dropOpenState["box4"] ? (
                     <IoIosArrowDropdown 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box4")}
                     />
                   ) : (
                    
                     <IoIosArrowDropright 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box4")}
                     />
                     
                   )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold pb-1">Exposure - Zero-day Attack</span>
-      <div className="flex gap-[6px]">
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
+      <span className=" font-semibold pb-1 max-sm:text-[7px]">Exposure - Zero-day Attack</span>
+      <div className="flex gap-[6px] max-sm:gap-[3px]">
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-4</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-5</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-10</span>
         </div>
        
       </div>
       </div>
       </div>
      
-    <div className="flex items-center gap-8 mr-[70px]">
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400">15</div>
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500">-</div>
-    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4">
-      <div className=" h-3 w-3 rounded-full bg-red-400"></div>
+    <div className="flex items-center gap-8 mr-[70px] max-sm:-mt-1 max-sm:gap-3 max-sm:ml-2">
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400 max-sm:h-3 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border">15</div>
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border max-sm:h-3">-</div>
+    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4  max-sm:border max-sm:h-5 max-sm:w-16 max-sm:text-[10px]">
+      <div className=" h-3 w-3 rounded-full bg-red-400 max-sm:h-[6px] max-sm:w-[6px]"></div>
       <span>Mitigate</span>
     </div>
     
@@ -354,46 +358,46 @@ const RiskManagement = () => {
    </div>
    <div className={`${dropOpenState["box4"]? " py-2 " : ""}`}></div>
       </div>
-      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full max-sm:w-[342px] max-sm:-ml-8 bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer max-sm:text-sm flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box5"]} onChange={()=>handleSingleCheck("box5")} />
-    <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
+    <span className="custom-checkbox h-4 w-4 bg-gray-300 border max-sm:h-[10px] max-sm:w-[10px] border-gray-500 "></span>
     
     </label>
     {dropOpenState["box5"] ? (
                     <IoIosArrowDropdown 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box5")}
                     />
                   ) : (
                     <IoIosArrowDropright 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box5")}
                     />
                   )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold pb-1">Physical Security - Theft</span>
-      <div className="flex gap-[6px]">
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
+      <span className=" font-semibold pb-1 max-sm:text-[7px]">Physical Security - Theft</span>
+      <div className="flex gap-[6px] max-sm:gap-[3px]">
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-4</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-5</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-10</span>
         </div>
        
       </div>
       </div>
       </div>
-    <div className="flex items-center gap-8 mr-[70px]">
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400">15</div>
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500">-</div>
-    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4">
-      <div className=" h-3 w-3 rounded-full bg-red-400"></div>
+    <div className="flex items-center gap-8 mr-[70px] max-sm:-mt-1 max-sm:gap-3 max-sm:ml-2">
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400 max-sm:h-3 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border">15</div>
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border max-sm:h-3">-</div>
+    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4  max-sm:border max-sm:h-5 max-sm:w-16 max-sm:text-[10px]">
+      <div className=" h-3 w-3 rounded-full bg-red-400 max-sm:h-[6px] max-sm:w-[6px]"></div>
       <span>Transfer</span>
     </div>
     
@@ -411,46 +415,46 @@ const RiskManagement = () => {
    </div>
    <div className={`${dropOpenState["box5"]? " py-2 " : ""}`}></div>
       </div>
-      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full max-sm:w-[342px] max-sm:-ml-8 bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer max-sm:text-sm flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box6"]} onChange={()=>handleSingleCheck("box6")} />
-    <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
+    <span className="custom-checkbox h-4 w-4 bg-gray-300 border max-sm:h-[10px] max-sm:w-[10px] border-gray-500 "></span>
     
     </label>
     {dropOpenState["box6"] ? (
                     <IoIosArrowDropdown 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box6")}
                     />
                   ) : (
                     <IoIosArrowDropright 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box6")}
                     />
                   )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold pb-1">Business Continuity - Lack of Contingency</span>
-      <div className="flex gap-[6px]">
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
+      <span className=" font-semibold pb-1 max-sm:text-[7px]">Business Continuity - Lack of Contingency</span>
+      <div className="flex gap-[6px] max-sm:gap-[3px]">
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-4</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-5</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-10</span>
         </div>
        
       </div>
       </div>
       </div>
-    <div className="flex items-center gap-8 mr-[70px]">
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400">15</div>
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500">-</div>
-    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4">
-      <div className=" h-3 w-3 rounded-full bg-red-400"></div>
+    <div className="flex items-center gap-8 mr-[70px] max-sm:-mt-1 max-sm:gap-3 max-sm:ml-2">
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400 max-sm:h-3 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border">15</div>
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border max-sm:h-3">-</div>
+    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4 max-sm:border max-sm:h-5 max-sm:w-16 max-sm:text-[10px]">
+      <div className=" h-3 w-3 rounded-full bg-red-400 max-sm:h-[6px] max-sm:w-[6px]"></div>
       <span>Mitigate</span>
     </div>
     
@@ -467,46 +471,46 @@ const RiskManagement = () => {
    </div>
    <div className={`${dropOpenState["box6"]? " py-2 " : ""}`}></div>
       </div>
-      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1 pb-2">
+      <div className=" register-container h-auto w-full max-sm:w-[342px] max-sm:-ml-8 bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer max-sm:text-sm flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box7"]} onChange={()=>handleSingleCheck("box7")} />
-    <span className={`custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500`}></span>
+    <span className={`custom-checkbox h-4 w-4 bg-gray-300 border max-sm:h-[10px] max-sm:w-[10px] border-gray-500`}></span>
     
     </label>
     {dropOpenState["box7"] ? (
                     <IoIosArrowDropdown 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box7")}
                     />
                   ) : (
                     <IoIosArrowDropright
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-sm" 
                       onClick={() => handleDropToggle("box7")}
                     />
                   )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold pb-1">Risky Software Supply Chain</span>
-      <div className="flex gap-[6px]">
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
+      <span className=" font-semibold pb-1 max-sm:text-[7px]">Risky Software Supply Chain</span>
+      <div className="flex gap-[6px] max-sm:gap-[3px]">
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-4</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
+        <div className=" h-5 w-16 rounded-lg bg-teal-200 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-5</span>
         </div>
-        <div className=" h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
+        <div className=" h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-10</span>
         </div>
        
       </div>
       </div>
       </div>
-    <div className="flex items-center gap-8 mr-[70px]">
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400">15</div>
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500">-</div>
-    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4">
-      <div className=" h-3 w-3 rounded-full bg-red-400"></div>
+    <div className="flex items-center gap-8 mr-[70px] max-sm:-mt-1 max-sm:gap-3 max-sm:ml-2">
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400 max-sm:h-3 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border">15</div>
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border max-sm:h-3">-</div>
+    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4  max-sm:border max-sm:h-5 max-sm:w-16 max-sm:text-[10px]">
+      <div className=" h-3 w-3 rounded-full bg-red-400 max-sm:h-[6px] max-sm:w-[6px]"></div>
       <span>Avoid</span>
     </div>
     
@@ -523,46 +527,46 @@ const RiskManagement = () => {
    </div>
    <div className={`${dropOpenState["box7"]? " py-2 " : ""}`}></div>
       </div>
-      <div className=" register-container h-auto w-full bg-white rounded-lg mt-1">
+      <div className=" register-container h-auto w-full max-sm:w-[342px] max-sm:-ml-8 bg-white rounded-lg mt-1">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
-      <label className="custom-checkbox-container text-white cursor-pointer flex ml-10 mt-2 font-normal text-sm">
+      <label className="custom-checkbox-container text-white cursor-pointer max-sm:text-sm flex ml-10 mt-2 font-normal text-sm">
     <input type="checkbox" checked={checkboxes["box8"]} onChange={()=>handleSingleCheck("box8")} />
-    <span className="custom-checkbox h-4 w-4 bg-gray-300 border border-gray-500 "></span>
+    <span className="custom-checkbox h-4 w-4 bg-gray-300 border max-sm:h-[10px] max-sm:w-[10px] border-gray-500 "></span>
     
     </label>
     {dropOpenState["box8"] ? (
                     <IoIosArrowDropdown 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-2xl" 
                       onClick={() => handleDropToggle("box8")}
                     />
                   ) : (
                     <IoIosArrowDropright 
-                      className="mt-2 text-xl cursor-pointer" 
+                      className="mt-2 text-xl cursor-pointer max-sm:text-2xl" 
                       onClick={() => handleDropToggle("box8")}
                     />
                   )}
       <div className="flex flex-col gap-[2px] mt-2 ml-1">
-      <span className=" font-semibold pb-1">Network Management - Advance Persistence Threats</span>
-      <div className="flex gap-[6px]">
-        <div className="h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-4</span>
+      <span className=" font-semibold pb-1 max-sm:text-[7px]">Network Management - Advance Persistence Threats</span>
+      <div className="flex gap-[6px] max-sm:gap-[3px]">
+        <div className="h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-4</span>
         </div>
-        <div className="h-5 w-16 rounded-lg bg-teal-200 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-5</span>
+        <div className="h-5 w-16 rounded-lg bg-teal-200 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-5</span>
         </div>
-        <div className="h-5 w-16 rounded-lg bg-red-400 relative">
-          <span className=" text-[10px] absolute left-4 top-[2px]">CyD-10</span>
+        <div className="h-5 w-16 rounded-lg bg-red-400 relative max-sm:h-3 max-sm:w-8 flex items-center justify-center">
+          <span className=" text-[10px] absolute left-4 top-[2px] max-sm:left-[6px] max-sm:text-[6px]">CyD-10</span>
         </div>
        
       </div>
       </div>
       </div>
-    <div className="flex items-center gap-8 mr-[70px]">
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400">15</div>
-    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500">-</div>
-    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4">
-      <div className=" h-3 w-3 rounded-full bg-red-400"></div>
+    <div className="flex items-center gap-8 mr-[70px] max-sm:-mt-1 max-sm:gap-3 max-sm:ml-2">
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-yellow-400 w-7 text-yellow-400 max-sm:h-3 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border">15</div>
+    <div className="flex items-center justify-center border-2 h-5 rounded-md text-sm border-gray-500 w-7 text-gray-500 max-sm:w-4 max-sm:rounded-sm max-sm:text-[8px] max-sm:border max-sm:h-3">-</div>
+    <div className="flex gap-2 items-center justify-center border-2 h-7 rounded-md text-sm border-red-400 w-24 text-red-400 mr-4 max-sm:border max-sm:h-5 max-sm:w-16 max-sm:text-[10px]">
+      <div className=" h-3 w-3 rounded-full bg-red-400 max-sm:h-[6px] max-sm:w-[6px]"></div>
       <span>Mitigate</span>
     </div>
     </div>
@@ -579,19 +583,19 @@ const RiskManagement = () => {
      <div className={`${dropOpenState["box8"]? " py-3 " : " py-2"}`}></div>
       </div>
       <div className="flex justify-between mt-1">
-        <div className=" h-10 w-20 rounded-lg text-gray-400 bg-white text-[12px] text-center flex items-center justify-center cursor-pointer">
+        <div className=" h-10 w-20 rounded-lg text-gray-400 bg-white text-[12px] text-center flex items-center justify-center cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-10 max-sm:rounded-sm">
           <span>8/page</span>
         </div>
         <div className="flex gap-2">
-          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer"><FaLessThan className=" ml-1" /><FaLessThan className=" mr-[6px]" /></div>
-          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer"><FaLessThan /></div>
-          <div className=" h-10 w-10 rounded-md text-white cursor-pointer text-[10px] flex items-center justify-center bg-gray-900">1</div>
-          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer">2</div>       
-             <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer">3</div>      
-                 <div className=" h-10 w-10 rounded-md bg-white text-[22px] flex items-center justify-center cursor-pointer">...</div> 
-                          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer">10</div> 
-                                   <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer"><FaGreaterThan /></div>
-          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer"><FaGreaterThan className=" ml-1" /><FaGreaterThan className=" mr-[6px]" /></div>
+          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-4 max-sm:rounded-sm"><FaLessThan className=" ml-1" /><FaLessThan className=" mr-[6px]" /></div>
+          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-4 max-sm:rounded-sm"><FaLessThan /></div>
+          <div className=" h-10 w-10 rounded-md text-white cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-4 max-sm:rounded-sm text-[10px] flex items-center justify-center bg-gray-900">1</div>
+          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-4 max-sm:rounded-sm">2</div>       
+             <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-4 max-sm:rounded-sm">3</div>      
+                 <div className=" h-10 w-10 rounded-md bg-white text-[22px] flex items-center justify-center cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-4 max-sm:rounded-sm">...</div> 
+                          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-4 max-sm:rounded-sm">10</div> 
+                                   <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-4 max-sm:rounded-sm"><FaGreaterThan /></div>
+          <div className=" h-10 w-10 rounded-md bg-white text-[10px] flex items-center justify-center cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-4 max-sm:rounded-sm"><FaGreaterThan className=" ml-1" /><FaGreaterThan className=" mr-[6px]" /></div>
         </div>
       </div>
       </div>
