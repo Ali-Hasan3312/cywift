@@ -73,44 +73,44 @@ const RiskManagement = () => {
        <span className=" ml-10 text-white font-[300] text-[16px] max-sm:text-[10px] max-sm:ml-2 text-opacity-90">All Risks</span>
       </div>
       <div className="flex flex-col gap-3 mt-2 ml-3">
-        <h1 className=" text-[17px] max-sm:text-[11px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300">Treatment</h1>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Accepted</span>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Mitigate</span>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Avoided</span>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Transferred</span>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Needs Treatment</span>
+        <h1 className=" text-[17px] max-sm:text-[12px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Treatment</h1>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Accepted</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Mitigate</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Avoided</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Transferred</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Needs Treatment</span>
         <div className=" border w-32 border-gray-300 mr-2"></div>
       </div>
       <div className="flex flex-col gap-2 mt-2 ml-3">
-        <h1 className=" text-[17px] max-sm:text-[11px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300">Assessment</h1>
+        <h1 className=" text-[17px] max-sm:text-[12px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Assessment</h1>
        
-        <span className=" text-[13px] max-sm:text-[8px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300">Scored</span>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Not Scored</span>
+        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-[9px] hover:text-green-500 hover:transition-all hover:duration-300">Scored</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Not Scored</span>
         <div className=" border w-32 border-gray-300 mr-2"></div>
       </div>
       <div className="flex flex-col gap-2 mt-2 ml-3">
-        <h1 className=" text-[17px] max-sm:text-[11px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300">Category</h1>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Assessment</span>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Audits</span>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Acess Control</span>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Asset Management</span>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Governance</span>
-        <span className=" text-[13px] font-medium cursor-pointer max-sm:text-sm opa hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[8px]">Physical Access</span>
+        <h1 className=" text-[17px] max-sm:text-[12px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300">Category</h1>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Assessment</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Audits</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Acess Control</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Asset Management</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Governance</span>
+        <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Physical Access</span>
       </div>
       </div>
       <div className=" h-screen w-full flex flex-col gap-1 overflow-auto">
       <div className="flex items-center justify-between h-10 py-[22px] w-full gap-2 bg-black rounded-lg max-sm:w-[310px]">
       <div className=" flex items-center">
-      <label className="custom-checkbox-container text-white cursor-pointer max-sm:text-sm flex items-center ml-10 max-sm:ml-2 font-normal text-sm max-sm:text-[8px] max-sm:w-[80px]"
+      <label className="custom-checkbox-container text-white cursor-pointer flex items-center ml-10 max-sm:ml-2 font-normal text-sm max-sm:text-[0.5rem] max-sm:w-[80px]"
       >
     <input type="checkbox" onChange={handleSelectAll} name="selectAll" />
-    <span className="custom-checkbox h-4 w-4 bg-gray-600 border max-sm:h-[10px] max-sm:w-[10px] border-gray-400"></span>
+    <span className="custom-checkbox h-4 w-4 bg-gray-600 border max-sm:h-[10px] max-sm:w-[10px] max-sm:rounded-sm border-gray-400"></span>
     Select All
     </label>
      
-        <span className=" text-white cursor-pointer max-sm:text-sm text-[17px] text-opacity-90 font-normal ml-10 hover:text-green-400 hover:transition-all hover:duration-300 max-sm:text-[8px] max-sm:w-[80px] max-sm:-ml-4">Risk Register</span>
+        <span className=" text-white cursor-pointer text-[17px] text-opacity-90 font-normal ml-10 hover:text-green-400 hover:transition-all hover:duration-300 max-sm:text-[0.5rem] max-sm:w-[80px] max-sm:-ml-4">Risk Register</span>
         <div className=" border border-r-[1px] ml-2 h-4 opacity-85 max-sm:h-2 max-sm:-ml-6"></div>
-        <span className=" text-white cursor-pointer max-sm:text-sm text-[17px] font-normal ml-4 hover:text-green-400 hover:transition-all hover:duration-300 text-opacity-90 max-sm:text-[8px] max-sm:w-[80px]">Risk Library</span>
+        <span className=" text-white cursor-pointer text-[17px] font-normal ml-4 hover:text-green-400 hover:transition-all hover:duration-300 text-opacity-90 max-sm:text-[0.5rem] max-sm:w-[80px]">Risk Library</span>
         </div>
         <div className=" h-8 w-[545px] ml-5 flex items-center gap-2 max-sm:h-6 max-sm:w-[150px]">
           <div className="border border-gray-400 h-7 bg-gray-800 rounded-md w-[450px] flex items-center gap-2 text-white  ml-8 max-sm:-ml-[50px] max-sm:h-5 max-sm:w-[80px]">

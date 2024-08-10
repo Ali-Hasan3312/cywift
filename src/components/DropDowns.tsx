@@ -70,7 +70,7 @@ const DropDowns = ({
   };
     return (
         <div className='h-full w-[90%] animate-slide-up pb-4 pt-2 mx-auto mt-2 bg-gray-300 rounded-lg flex flex-col'>
-            <div className="flex items-center gap-6 font-bold pl-2 h-auto py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2 relative max-w-[95%]"  >
+            <div className="flex items-center gap-6 font-bold pl-2 h-auto py-2 w-[95%] max-sm:w-[85%] max-sm:text-sm rounded-lg text-lg mx-auto bg-white mt-2 relative max-w-[95%]"  >
                 {
                    dropOpenState["box1"] ? (
                     <>
@@ -84,7 +84,7 @@ const DropDowns = ({
                     <>
                    <div className="transition-all ease-out duration-500 translate-y-0">
                   <div className="absolute top-2 left-2 flex items-center gap-2 font-bold text-lg">
-                  <FaAngleDown className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box1")}/>
+                  <FaAngleDown className="text-[12px] max-sm:text-[9px] cursor-pointer" onClick={() => handleDropToggle("box1")}/>
                   <h1 className="">Control Information</h1>
                   </div>
                   <div className=" h-6 w-6 border border-gray-500 cursor-pointer text-sm absolute top-2 right-2 rounded-full flex items-center justify-center">
@@ -139,7 +139,7 @@ const DropDowns = ({
                 
                
             </div>
-            <div className="flex items-center gap-6  relative font-bold pl-2 h-auto py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2">
+            <div className="flex items-center gap-6  relative font-bold pl-2 h-auto py-2 w-[95%] max-sm:w-[85%] max-sm:text-sm rounded-lg text-lg mx-auto bg-white mt-2">
             {
                    dropOpenState["box2"] ? (
                     <>
@@ -201,7 +201,7 @@ const DropDowns = ({
                    ) }
                 
             </div>
-            <div className="flex items-center gap-6  font-bold pl-2 h- py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2">
+            <div className="flex items-center gap-6  font-bold pl-2 h- py-2 w-[95%] max-sm:w-[85%] max-sm:text-sm rounded-lg text-lg mx-auto bg-white mt-2">
             {
                    dropOpenState["box3"] ? (
                     <>
@@ -222,7 +222,7 @@ const DropDowns = ({
                         </>
                    ) }
             </div>
-            <div className="flex items-center gap-6 relative font-bold pl-2 h- py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2">
+            <div className="flex items-center gap-6 relative font-bold pl-2 h- py-2 w-[95%] max-sm:w-[85%] max-sm:text-sm rounded-lg text-lg mx-auto bg-white mt-2">
             {
                    dropOpenState["box4"] ? (
                     <>
@@ -259,7 +259,7 @@ const DropDowns = ({
                         </>
                    ) }
             </div>
-            <div className="flex items-center gap-6 relative font-bold pl-2 h- py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2 ">
+            <div className="flex items-center gap-6 relative font-bold pl-2 h- py-2 w-[95%] max-sm:w-[85%] max-sm:text-sm rounded-lg text-lg mx-auto bg-white mt-2 ">
             {
                    dropOpenState["box5"] ? (
                     <>
@@ -368,7 +368,7 @@ const DropDowns = ({
                         </>
                    ) }
             </div>
-            <div className="flex items-center gap-6  font-bold pl-2 h- py-2 w-[95%] rounded-lg text-lg mx-auto bg-white mt-2">
+            <div className="flex items-center gap-6  font-bold pl-2 h- py-2 w-[95%] max-sm:w-[85%] max-sm:text-sm rounded-lg text-lg mx-auto bg-white mt-2">
             {
                    dropOpenState["box6"] ? (
                     <>
