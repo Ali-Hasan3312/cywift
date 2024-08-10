@@ -91,11 +91,11 @@ const DropDowns = ({
                   <GrEdit className=" text-gray-500"/>
                   </div>
                     <div className="flex flex-wrap items-center mt-6 gap-8 ml-6 pb-2">
-                      <div className="flex flex-col gap-4 w-[30vw]">
+                      <div className="flex flex-col gap-4 w-[30vw] max-sm:mt-3">
                       <div className="flex items-center gap-12">
                         <div className="h-auto">
                          <h3 className="flex text-[12px] font-bold">Risk Title<span className=" text-red-600">*</span></h3>
-                         <span className=" text-[14px]">{controlInfo.RiskTitle}</span>
+                         <span className="text-[14px]">{controlInfo.RiskTitle}</span>
                             </div>                       
                         <div className="h-auto">
                         <h3 className="flex text-[12px] font-bold">Risk Category</h3>
@@ -104,10 +104,10 @@ const DropDowns = ({
                         </div>
                      
                        
-                        <div className="flex items-center gap-[180px]">
+                        <div className="flex items-center gap-[180px] max-sm:gap-[100px]">
                        <div className=" h-auto">
                         <h3 className="flex text-[12px] font-bold">Risk Code</h3>
-                        <span className=" text-[14px]">{controlInfo.RiskCode}</span>
+                        <span className="text-[14px]">{controlInfo.RiskCode}</span>
                         </div>
                         <div className="h-auto">
                         <h3 className="flex text-[12px] font-bold">Vulnarability</h3>
@@ -117,7 +117,7 @@ const DropDowns = ({
                        <div className="flex items-center">
                        <div className="h-auto">
                         <h3 className="flex text-[12px] font-bold">Supporting Documents</h3>
-                        <input type="file" className="text-[14px]"/>
+                        <input type="file" className="text-[14px] max-sm:mt-1 max-sm:text-[10px]"/>
                         </div>
                         <div className="h-auto -ml-12">
                         <h3 className="flex text-[12px] font-bold">Threat</h3>
@@ -127,7 +127,7 @@ const DropDowns = ({
                       </div>
                        <div className="">
                         <h3 className="flex text-[12px] font-bold">Control Description<span className=" text-red-600">*</span></h3>
-                        <div className=" h-auto w-[25vw] border border-black text-sm p-2 rounded-lg ">
+                        <div className=" h-auto w-[25vw] max-sm:w-[50vw] border border-black text-sm p-2 rounded-lg ">
                         <p>{controlInfo.ControlDescription}</p>
                         </div>
                         </div>
@@ -157,41 +157,41 @@ const DropDowns = ({
                  
                    <div className="absolute top-2 left-2 flex items-center gap-6 font-bold text-lg">
 
-                    <FaAngleDown className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box2")}/>
-                    <h1>Risk Summary</h1>
+                    <FaAngleDown className="text-[12px] max-sm:text-[8px] cursor-pointer" onClick={() => handleDropToggle("box2")}/>
+                    <h1 className=" max-sm:text-sm">Risk Summary</h1>
                     </div>
-                    <div className="flex gap-4 mt-8 pl-4">
+                    <div className="flex gap-4 mt-8 pl-4 max-sm:flex-wrap">
                        <div>
                       <div className=" mt-4">
                       <h3 className="text-[14px] font-bold mb-2">Risk Calculation</h3>
                      
                       </div>
-                        <div className="flex justify-center gap-0">
+                        <div className="flex justify-center gap-0 max-sm:-ml-3">
                         <div className=" h-32 w-auto flex flex-col justify-center gap-1">
-                           <div className=" h-20 w-20 border-[8px] rounded-full border-red-600 flex items-center justify-center">$ {RiskSummery.PredictedRisk}m</div>
-                           <span className=" text-base">Predicted Risk</span>
+                           <div className=" h-20 w-20 border-[8px] max-sm:h-14 max-sm:border-[4px] max-sm:text-[12px] max-sm:w-14   rounded-full border-red-600 flex items-center justify-center">$ {RiskSummery.PredictedRisk}m</div>
+                           <span className=" text-base max-sm:text-[10px]">Predicted Risk</span>
                            </div>
-                           <div className=" h-32 w-auto -ml-12">
+                           <div className=" h-32 w-auto -ml-12 max-sm:mt-2 max-sm:-ml-8">
                            <div className="h-20 w-20 flex items-center justify-center">=</div>
                            </div>
-                           <div className=" h-32 w-auto flex flex-col justify-center gap-1">
-                            <div className=" h-20 w-20 border-[8px] rounded-full border-red-600 flex items-center justify-center">{RiskSummery.Probability}%</div>
-                            <span className=" text-base">Probability</span>
+                           <div className=" h-32 w-auto flex flex-col justify-center gap-1 max-sm:-ml-6">
+                            <div className=" h-20 w-20 border-[8px] max-sm:h-14 max-sm:border-[4px] max-sm:text-[12px] max-sm:w-14 rounded-full border-red-600 flex items-center justify-center">{RiskSummery.Probability}%</div>
+                            <span className=" text-base max-sm:text-[10px]">Probability</span>
                             </div>
-                           <div className=" h-32 w-auto -ml-4">
+                           <div className=" h-32 w-auto -ml-4 max-sm:-ml-5 max-sm:mt-2 max-sm:text-[12px]">
                            <div className="h-20 w-20 flex items-center justify-center">X</div>
                            </div>
-                           <div className=" h-32 w-auto flex flex-col justify-center gap-1">
+                           <div className=" h-32 w-auto flex flex-col justify-center gap-1 max-sm:-ml-6">
                                 
-                            <div className=" h-20 w-20 border-[8px] rounded-full border-red-600 flex items-center justify-center">$ {RiskSummery.InheritedRisk}m</div>
-                            <span className=" text-base">Inherited Risk</span>
+                            <div className=" h-20 w-20 border-[8px] max-sm:h-14 max-sm:border-[4px] max-sm:text-[12px] max-sm:w-14 rounded-full border-red-600 flex items-center justify-center">$ {RiskSummery.InheritedRisk}m</div>
+                            <span className=" text-base max-sm:text-[10px]">Inherited Risk</span>
                             </div>
                         </div>
                        </div>
-                       <div>
+                       <div className=" max-sm:-mt-6 max-sm:-ml-2">
                      <div className="flex items-center justify-between">
-                     <h2 className="text-[14px] font-semibold">Risk Trend</h2>
-                     <div className=" text-[14px] font-semibold">W M Q Y</div>
+                     <h2 className="text-[14px] max-sm:text-[10px] font-semibold">Risk Trend</h2>
+                     <div className=" text-[14px] max-sm:text-[10px] font-semibold">W M Q Y</div>
                      </div>
                        <RiskTrendChart />
                        </div>
@@ -237,8 +237,8 @@ const DropDowns = ({
                     <>
                     <div className="transition-all ease-out duration-500 translate-y-0">
                         <div className=" flex items-center gap-6 absolute top-2 left-2 ">
-                        <FaAngleDown className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box4")}/>
-                        <h1 className=" font-bold text-lg">Probability Assessment</h1>
+                        <FaAngleDown className="text-[12px] cursor-pointer max-sm:text-[10px]" onClick={() => handleDropToggle("box4")}/>
+                        <h1 className=" font-bold text-lg max-sm:text-[14px] ">Probability Assessment</h1>
                         </div>
                    
                         <div className="relative pt-1 mt-8">
@@ -248,7 +248,7 @@ const DropDowns = ({
             max="100"
             value={value}
             onChange={handleChange}
-            className="w-[50vw] h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer"
+            className="w-[50vw] h-2 max-sm:h-1 bg-gray-700 rounded-lg appearance-none cursor-pointer"
           />
           <div className="flex justify-between text-xs text-gray-600 px-2 mt-2">
             <span>0%</span>
@@ -265,7 +265,7 @@ const DropDowns = ({
                     <>
                     <div className="transition-all ease-in duration-500 flex items-center gap-6 translate-y-[10%]">
 
-                    <FaAngleRight className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box5")} /> 
+                    <FaAngleRight className="text-[12px] cursor-pointer max-sm:text-[10px]" onClick={() => handleDropToggle("box5")} /> 
                         <h1 className=" font-bold">Risk Treatment</h1>
                     </div>
                         </> 
@@ -277,52 +277,52 @@ const DropDowns = ({
                     <div className=" flex items-center gap-6 absolute top-2 left-2  ">
 
                     <FaAngleDown className="text-[12px] cursor-pointer" onClick={() => handleDropToggle("box5")}/>
-                    <h1 className=" font-bold text-lg">Risk Treatment</h1>
+                    <h1 className=" font-bold text-lg max-sm:text-[16px]">Risk Treatment</h1>
                    </div>
                     
                     <div className=" mt-8 pt-1 ml-9">
-                      <h3 className=" font-bold text-sm">Select Treatment</h3>
-                     <select className=" h-10 w-[55vw] border rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
+                      <h3 className=" font-bold text-sm max-sm:text-[12px]">Select Treatment</h3>
+                     <select className=" h-10 w-[55vw] max-sm:h-8 max-sm:w-[40vw] max-sm:text-[12px] border rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
                       <option>Treatment-1</option>
                       <option>Treatment-2</option>
                       <option>Treatment-3</option>
                      </select>
-                     <div className=" border border-gray-300 w-[55vw] mt-4"></div>
+                     <div className=" border border-gray-300 w-[55vw] max-sm:w-[40vw] mt-4"></div>
                     </div>
-                    <div className="flex items-center justify-between w-[55vw] mt-3 pt-1 ml-9">
+                    <div className="flex items-center justify-between w-[55vw] max-sm:w-[40vw] max-sm:flex-wrap mt-3 pt-1 ml-9">
                       <div>
-                      <h3 className=" font-bold text-sm">Risk Owners</h3>
-                     <select className=" h-10 w-[25vw] border rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
+                      <h3 className=" font-bold text-sm max-sm:text-[12px]">Risk Owners</h3>
+                     <select className=" h-10 w-[25vw] border max-sm:h-8 max-sm:text-[10px] max-sm:w-[40vw] rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
                       <option>{RiskTreatment.RiskOwner}</option>
                       <option>Owner-2</option>
                       <option>Owner-3</option>
                      </select>
-                     <div className=" h-8 w-[150px] border cursor-pointer border-black mt-4 rounded-[16px] bg-gray-200 flex items-center ">
-                      <div className=" h-8 w-8 bg-black rounded-full text-white flex items-center justify-center text-[24px]">
+                     <div className=" h-8 w-[150px] max-sm:h-6 max-sm:w-[120px] border cursor-pointer border-black mt-4 rounded-[16px] bg-gray-200 flex items-center ">
+                      <div className=" h-8 w-8 max-sm:h-6 max-sm:w-6 bg-black rounded-full text-white flex items-center justify-center text-[24px]">
                         <CiUser />
                       </div>
-                      <h4 className="text-[12px] font-bold ml-1">{RiskTreatment.RiskOwner}</h4>
+                      <h4 className="text-[12px] font-bold ml-1 max-sm:text-[8px]">{RiskTreatment.RiskOwner}</h4>
                      </div>
                       </div>
-                      <div>
-                      <h3 className=" font-bold text-sm">Risk Reviewers</h3>
-                     <select className=" h-10 w-[25vw] border rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
+                      <div className="max-sm:mt-2">
+                      <h3 className=" font-bold text-sm max-sm:text-[12px]">Risk Reviewers</h3>
+                     <select className=" h-10 w-[25vw] border max-sm:h-8 max-sm:text-[10px] max-sm:w-[40vw] rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
                       <option>{RiskTreatment.RiskReviewer}</option>
                       <option>Reviewer-2</option>
                       <option>Reviewer-3</option>
                      </select>
-                     <div className=" h-8 w-[150px] border cursor-pointer border-black mt-4 rounded-[16px] bg-gray-200 flex items-center ">
-                      <div className=" h-8 w-8 bg-black rounded-full text-white flex items-center justify-center text-[24px]">
+                     <div className=" h-8 w-[150px] max-sm:h-6 max-sm:w-[120px] border cursor-pointer border-black mt-4 rounded-[16px] bg-gray-200 flex items-center ">
+                      <div className=" h-8 w-8 max-sm:h-6 max-sm:w-6 bg-black rounded-full text-white flex items-center justify-center text-[24px]">
                         <CiUser />
                       </div>
-                      <h4 className="text-[12px] font-bold ml-1">{RiskTreatment.RiskReviewer}</h4>
+                      <h4 className="text-[12px] font-bold ml-1 max-sm:text-[8px]">{RiskTreatment.RiskReviewer}</h4>
                      </div>
                       </div>
                     </div>
-                      <div className=" border border-gray-300 w-[55vw] mt-4 ml-9"></div>
+                      <div className=" border border-gray-300 w-[55vw] max-sm:w-[40vw] mt-4 ml-9"></div>
                       <div className=" mt-3 pt-1 ml-9">
-                      <h3 className=" font-bold text-sm">Controls Mapping</h3>
-                     <select className=" h-10 w-[55vw] border rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
+                      <h3 className=" font-bold text-sm max-sm:text-[12px]">Controls Mapping</h3>
+                     <select className=" h-10 w-[55vw] max-sm:h-8 max-sm:text-[10px] max-sm:w-[40vw] border rounded-lg border-gray-500 bg-gray-200 outline-none mt-2 px-4 text-sm">
                       <option>Mapping-1</option>
                       <option>Mapping-2</option>
                       <option>Mapping-3</option>
@@ -331,36 +331,36 @@ const DropDowns = ({
                     </div>
                     <div className="flex items-center">
 
-                    <div className=" h-6 w-24 border ml-9 border-black mt-4 rounded-[16px] bg-green-400 flex items-center justify-between ">
+                    <div className=" h-6 max-sm:h-4 max-sm:w-16 w-24 border ml-9 border-black mt-4 rounded-[16px] bg-green-400 flex items-center justify-between ">
                      
-                      <h4 className="text-sm font-bold ml-1">{RiskTreatment.OwnerId}</h4>
+                      <h4 className="text-sm max-sm:text-[10px] font-bold ml-1">{RiskTreatment.OwnerId}</h4>
                       <RxCrossCircled  className=" text-gray-800 mr-1 cursor-pointer text-[12px]"/>
                      </div>
-                    <div className=" h-6 w-24 border ml-9 er border-black mt-4 rounded-[16px] bg-green-400 flex items-center justify-between ">
+                    <div className=" h-6 w-24 max-sm:h-4 max-sm:w-16 border ml-9 er border-black mt-4 rounded-[16px] bg-green-400 flex items-center justify-between ">
                      
-                      <h4 className="text-sm font-bold ml-1">{RiskTreatment.RiskId}</h4>
+                      <h4 className="text-sm max-sm:text-[10px] font-bold ml-1">{RiskTreatment.RiskId}</h4>
                       <RxCrossCircled  className=" text-gray-800 mr-1 cursor-pointer text-[12px]"/>
                      </div>
                     </div>
                     <div className=" mt-3 pt-1 ml-9">
-                    <h3 className=" font-bold text-sm">Controls Weightage</h3>
-                   <div className="flex items-center gap-8 text-sm mt-2">
+                    <h3 className=" font-bold text-sm max-sm:text-[12px]">Controls Weightage</h3>
+                   <div className="flex items-center gap-8 max-sm:gap-2 text-sm max-sm:text-[10px] mt-2">
                    <div className="font-bold">
                       <h3 >{RiskTreatment.OwnerId}</h3>
-                      <div className=" h-6 w-28 font-bold rounded mt-2 bg-gray-300 flex items-center justify-center">{RiskTreatment.OwnerValue}%</div>
+                      <div className=" h-6 w-28 max-sm:h-4 max-sm:w-16 font-bold rounded mt-2 bg-gray-300 flex items-center justify-center">{RiskTreatment.OwnerValue}%</div>
                     </div>
                    <div className="font-bold">
                       <h3>{RiskTreatment.RiskId}</h3>
-                      <div className=" h-6 w-28 font-bold rounded mt-2 bg-gray-300 flex items-center justify-center">
+                      <div className=" h-6 w-28 max-sm:h-4 max-sm:w-16 font-bold rounded mt-2 bg-gray-300 flex items-center justify-center">
                         {RiskTreatment.ReviewerValue}%</div>
                     </div>
                    <div className="font-bold">
                       <h3>Residual Risk</h3>
-                      <div className=" h-6 w-28 font-bold rounded mt-2 bg-gray-300 flex items-center justify-center">
+                      <div className=" h-6 w-28 max-sm:h-4 max-sm:w-16 font-bold rounded mt-2 bg-gray-300 flex items-center justify-center">
                         {ProbabilityAssessment.Probability}%</div>
                     </div>
                    </div>
-                   <div className=" border border-gray-300 w-[55vw] mt-4"></div>
+                   <div className=" border border-gray-300 w-[55vw] max-sm:w-[40vw] mt-4"></div>
                    <div className=" mt-4"></div>
                     </div>
 

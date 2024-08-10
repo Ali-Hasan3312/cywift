@@ -12,7 +12,7 @@ const data = [
 
 const RiskTrendChart = () => {
   return (
-    <div className="w-[350px] h-60 bg-gray-100 p-4 rounded-lg">
+    <div className="w-[350px] h-60 bg-gray-100 max-sm:h-36 max-sm:w-[230px] p-4 rounded-lg">
       <ResponsiveContainer width="100%" height="100%">
         <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
