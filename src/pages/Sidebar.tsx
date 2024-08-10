@@ -40,7 +40,7 @@ const Sidebar = () => {
         phoneActive
           ? {
               width: "14rem",
-              height: "80%",
+              height: "100%",
               position: "fixed",
               top: 0,
               left: showModal ? "0" : "-20rem",

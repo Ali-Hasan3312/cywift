@@ -22,7 +22,7 @@ export default {
         },
       },
       animation: {
-        'slide-up': 'slide-up 0.9s ease-in-out forwards',
+        'slide-up': 'slide-up 0.5s ease-in-out forwards',
       },
     },
   },
