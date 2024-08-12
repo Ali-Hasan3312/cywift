@@ -47,6 +47,13 @@
   transform: translate(-50%, -60%) rotate(45deg);
   opacity: 0;
 }
+@media screen and (max-width: 768px) {
+  .custom-checkbox-container .custom-checkbox::after {
+    width: 6px; /* Smaller width for mobile devices */
+    height: 10px; /* Smaller height for mobile devices */
+    border-width: 0 1.5px 1.5px 0; /* Slightly thinner border for mobile */
+  }
+}
 
 /* Show checkmark when checked */
 .custom-checkbox-container input[type="checkbox"]:checked + .custom-checkbox::after {

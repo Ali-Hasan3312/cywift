@@ -35,7 +35,7 @@ const Sidebar = () => {
         </button>
       )}
        
-      <div className=" h-[90%] pb-2 w-[13vw] bg-black rounded-md relative -ml-8 -mt-6 overflow-hidden overflow-y-auto z-10"
+      <div className=" h-[90%] pb-2 w-[14vw] bg-black rounded-md relative -ml-8 -mt-6 overflow-hidden overflow-y-auto z-10"
       style={
         phoneActive
           ? {
@@ -69,16 +69,20 @@ const Sidebar = () => {
           
             </div>
             <div className=" border mt-4 w-[150px] mx-auto border-gray-500"></div>
+            <div className="w-[180px] mx-auto">
             <div className=" text-gray-200 flex items-center gap-2 ml-2 mt-4 hover:text-green-400">
                 <BsFillGridFill  />
                 <a href="#" className=" text-sm ">Dashboard</a>
             </div>
+            </div>
+            <div className="w-[180px] mx-auto">
             <div className=" text-gray-200 flex items-center gap-2 ml-2 mt-4 hover:text-green-400 cursor-pointer    ">
                 <img className=" h-5 w-5" src="https://cdn.prod.website-files.com/6565124c786d4f76eddcae02/656cbb9198a3f4facf74b08b_image%20365.svg" alt="" />
                 <a href="#" className=" text-sm ">My Cywift</a>
             </div>
+            </div>
             
-            <div>
+            <div className="w-[180px] mx-auto">
                 <h5 className="text-gray-200 text-[0.7rem] ml-2 mt-4 uppercase">compliance</h5>
                 <div className="flex items-center gap-2 ml-2 mt-2 cursor-pointer">
                     <RiFileList2Fill className=" text-green-400"/>
@@ -99,7 +103,7 @@ const Sidebar = () => {
                 
                 
             </div>
-            <div>
+            <div className="w-[180px] mx-auto">
             <h5 className="text-gray-200 text-[0.7rem] ml-2 mt-4 uppercase">Risk </h5>
             <div className="flex items-center gap-2 ml-2 mt-2 text-gray-200 hover:text-green-400">
                     <MdInfoOutline className=" font-[900] text-[16px]"/>
@@ -111,7 +115,7 @@ const Sidebar = () => {
                 </div>
                 
             </div>
-            <div>
+            <div className="w-[180px] mx-auto">
             <h5 className="text-gray-200 text-[0.7rem] ml-2 mt-4 uppercase">Governance</h5>
             <div className="flex items-center gap-2 ml-2 mt-2 text-gray-200 hover:text-green-400">
                     <PiNotepadThin className=" font-[900] text-[16px]"/>
@@ -125,6 +129,8 @@ const Sidebar = () => {
          
            
                 <div className=" border border-t-[1px]  mt-[62px] border-gray-500 w-[140px] mx-auto"></div>
+                <div className="w-[180px] mx-auto">
+
             <div className="text-gray-200 flex items-center ml-2 mt-2  gap-2 cursor-pointer hover:text-green-500">
                 <RiThunderstormsLine />
             <h5 className="text-gray-200 text-sm cursor-pointer hover:text-green-400">Integrations</h5>
@@ -133,6 +139,7 @@ const Sidebar = () => {
             <IoSettingsOutline />
             <h5 className=" text-sm cursor-pointer hover:text-green-400">Settings</h5>
             </div>
+                </div>
             {phoneActive && (
           <button id="close-sidebar" onClick={() => setShowModal(false)} className=' w-[70%] h-7 my-4 mx-auto flex items-center justify-center p-3 border-none text-sm outline-none cursor-pointer bg-red-500 text-white rounded-lg'>
             Close

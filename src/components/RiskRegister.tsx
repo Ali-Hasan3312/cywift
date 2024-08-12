@@ -60,14 +60,14 @@ const RiskManagement = () => {
   
   return (
     <div className=" h-screen bg-gray-300 pt-8 pl-8 pb-4 flex gap-10 overflow-y-auto">
-    <div className="h-[899px]">
+    <div className="h-[866px]">
 
     <Sidebar />
     </div>
         <div className=" -ml-7 max-sm:-ml-8">
       <Navbar />
     <div className="flex h-[93vh] mt-2 gap-2 max-sm:-ml-8">
-      <div className=" h-[704px] w-[150px] max-sm:w-[100px] max-sm:h-[542px] bg-white rounded-lg">
+      <div className=" h-[676px] w-[150px] max-sm:w-[100px] max-sm:h-[512px] bg-white rounded-lg">
       <div className="flex items-center h-[42px] w-full bg-black rounded-lg cursor-pointer max-sm:text-sm">
        <HiOutlineAdjustmentsVertical className=" text-white ml-2" />
        <span className=" ml-10 text-white font-[300] text-[16px] max-sm:text-[10px] max-sm:ml-2 text-opacity-90">All Risks</span>
@@ -98,7 +98,7 @@ const RiskManagement = () => {
         <span className=" text-[13px] font-medium cursor-pointer hover:text-green-500 hover:transition-all hover:duration-300 max-sm:text-[9px]">Physical Access</span>
       </div>
       </div>
-      <div className=" h-screen w-full flex flex-col gap-1 overflow-auto">
+      <div className="h-[704px] max-h-[673px] w-full flex flex-col gap-1">
       <div className="flex items-center justify-between h-10 py-[22px] w-full gap-2 bg-black rounded-lg max-sm:w-[310px]">
       <div className=" flex items-center">
       <label className="custom-checkbox-container text-white cursor-pointer flex items-center ml-10 max-sm:ml-2 font-normal text-sm max-sm:text-[0.5rem] max-sm:w-[80px]"
@@ -108,21 +108,24 @@ const RiskManagement = () => {
     Select All
     </label>
      
-        <span className=" text-white cursor-pointer text-[17px] text-opacity-90 font-normal ml-10 hover:text-green-400 hover:transition-all hover:duration-300 max-sm:text-[0.5rem] max-sm:w-[80px] max-sm:-ml-4">Risk Register</span>
-        <div className=" border border-r-[1px] ml-2 h-4 opacity-85 max-sm:h-2 max-sm:-ml-6"></div>
-        <span className=" text-white cursor-pointer text-[17px] font-normal ml-4 hover:text-green-400 hover:transition-all hover:duration-300 text-opacity-90 max-sm:text-[0.5rem] max-sm:w-[80px]">Risk Library</span>
+        <span className=" text-white cursor-pointer text-[17px] text-opacity-90 font-normal ml-10 hover:text-green-400 hover:transition-all hover:duration-300 max-sm:text-[0.5rem] max-sm:w-[80px] max-sm:-ml-[22px]">Risk Register</span>
+        <div className=" border border-r-[1px] ml-2 h-4 opacity-85 max-sm:h-2 max-sm:-ml-[22px]"></div>
+        <span className=" text-white cursor-pointer text-[17px] font-normal ml-4 hover:text-green-400 hover:transition-all hover:duration-300 text-opacity-90 max-sm:text-[0.5rem] max-sm:w-[80px] max-sm:ml-2">Risk Library</span>
         </div>
-        <div className=" h-8 w-[545px] ml-5 flex items-center gap-2 max-sm:h-6 max-sm:w-[150px]">
-          <div className="border border-gray-400 h-7 bg-gray-800 rounded-md w-[450px] flex items-center gap-2 text-white  ml-8 max-sm:-ml-[50px] max-sm:h-5 max-sm:w-[80px]">
-          <IoSearchOutline className=" text-xl ml-2 max-sm:text-sm"/>
-          <input type="text" className=" w-full outline-none px-4 border-none bg-inherit h-4 text-[12px] font-light" placeholder="Search by Risk name or code" />
+        <div className=" h-8 w-[545px] max-w-md mx-auto ml-5 max-sm:ml-4 flex items-center gap-2 max-sm:gap-3 max-sm:h-6 max-sm:w-[150px]">
+          <div className="border border-gray-400 h-7 bg-gray-800 rounded-md w-[450px] flex items-center gap-2 text-white max-sm:gap-0  ml-8 max-sm:-ml-[50px] max-sm:h-5 max-sm:w-[95px]">
+          <IoSearchOutline className=" text-xl ml-2 max-sm:text-[8px] z-10 max-sm:ml-1"/>
+          <input type="text" className=" w-full outline-none px-4 bg-inherit py-1 text-[12px] placeholder-gray-300 max-sm:text-[5px] rounded-md font-light pr-[9px] max-sm:-ml-3" placeholder="Search by Risk name or code" />
           </div>
-          <div className=" text-white text-opacity-90 ml-4 max-sm:ml-0 cursor-pointer max-sm:text-sm hover:text-green-400">
+          <div className=" text-white text-opacity-90 ml-4 max-sm:-ml-[5px] cursor-pointer max-sm:text-[14px] hover:text-green-400">
           <IoDownloadOutline />
           </div>
         </div>
     
       </div>
+
+     
+      <div className="overflow-auto">
       <div className="register-container-1 h-auto w-full max-sm:w-[342px] max-sm:-ml-8 bg-white rounded-lg mt-1 pb-2">
     <div className="flex items-center justify-between">
     <div className="flex items-center gap-1">
@@ -581,6 +584,7 @@ const RiskManagement = () => {
       ) : (<></>)}
    </div>
      <div className={`${dropOpenState["box8"]? " py-3 " : " py-2"}`}></div>
+      </div>
       </div>
       <div className="flex justify-between mt-1">
         <div className=" h-10 w-20 rounded-lg text-gray-400 bg-white text-[12px] text-center flex items-center justify-center cursor-pointer max-sm:text-[8px] max-sm:h-4 max-sm:w-10 max-sm:rounded-sm">

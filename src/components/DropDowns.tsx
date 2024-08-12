@@ -69,7 +69,7 @@ const DropDowns = ({
     setValue(parseInt(e.target.value, 10));
   };
     return (
-        <div className='h-full w-[90%] animate-slide-up pb-4 pt-2 mx-auto mt-2 bg-gray-300 rounded-lg flex flex-col'>
+        <div className='h-full w-[90%] max-sm:w-[80%] max-sm:ml-[50px] animate-slide-up pb-4 pt-2 mx-auto mt-2 bg-gray-300 rounded-lg flex flex-col'>
             <div className="flex items-center gap-6 font-bold pl-2 h-auto py-2 w-[95%] max-sm:w-[85%] max-sm:text-sm rounded-lg text-lg mx-auto bg-white mt-2 relative max-w-[95%]"  >
                 {
                    dropOpenState["box1"] ? (
@@ -236,12 +236,12 @@ const DropDowns = ({
 
                     <>
                     <div className="transition-all ease-out duration-500 translate-y-0">
-                        <div className=" flex items-center gap-6 absolute top-2 left-2 ">
+                        <div className=" flex items-center gap-6 absolute top-2 max-sm:-ml-2 left-2">
                         <FaAngleDown className="text-[12px] cursor-pointer max-sm:text-[10px]" onClick={() => handleDropToggle("box4")}/>
-                        <h1 className=" font-bold text-lg max-sm:text-[14px] ">Probability Assessment</h1>
+                        <h1 className=" font-bold text-lg max-sm:text-sm whitespace-nowrap">Probability Assessment</h1>
                         </div>
                    
-                        <div className="relative pt-1 mt-8">
+                        <div className="relative pt-1 mt-8 ml-2">
           <input
             type="range"
             min="0"
